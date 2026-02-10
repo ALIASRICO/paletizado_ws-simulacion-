@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dobot_msgs_v4/srv/MovJIO_Response",
+      "fields": [
+        {
+          "name": "res",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dobot_msgs_v4/srv/MovJIO_Response",
+      "hash_string": "RIHS01_0b3433f9a7d43855677e678ef2f3a8f8ddf782dfa49258fabcdc662a64ef50f6"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: dobot-vision
+Version: 0.1.0
+Summary: Perception layer for Dobot CR20 palletizing system
+Maintainer: user
+Maintainer-email: user@dobot.com
+License: Apache-2.0

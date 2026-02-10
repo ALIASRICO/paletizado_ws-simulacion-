@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dobot_msgs_v4/msg/RobotStatus",
+      "fields": [
+        {
+          "name": "is_enable",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "is_connected",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dobot_msgs_v4/msg/RobotStatus",
+      "hash_string": "RIHS01_ff493553e1d2b7a3ef36f734f4d422acd38975e30dc70daeb10547827341801b"
+    }
+  ]
+}

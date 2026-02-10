@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dobot_msgs_v4/srv/FCSetStiffness_Response",
+      "fields": [
+        {
+          "name": "res",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dobot_msgs_v4/srv/FCSetStiffness_Response",
+      "hash_string": "RIHS01_992100b7c6573931bfe00f8d6e453b0e80900d725faf943ec1712295d4a95885"
+    }
+  ]
+}

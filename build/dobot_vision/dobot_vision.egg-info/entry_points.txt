@@ -1,0 +1,3 @@
+[console_scripts]
+pose_publisher = dobot_vision.pose_publisher:main
+vision_display = dobot_vision.vision_display:main

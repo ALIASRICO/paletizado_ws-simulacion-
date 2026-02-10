@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dobot_msgs_v4/srv/VelL_Request",
+      "fields": [
+        {
+          "name": "r",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dobot_msgs_v4/srv/VelL_Request",
+      "hash_string": "RIHS01_485d808c3b7e956a5cfb00502b847a44a76399e79c4c8ab09ad8116c226d6038"
+    }
+  ]
+}

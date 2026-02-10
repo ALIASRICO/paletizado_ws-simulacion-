@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dobot_msgs_v4/srv/EndRTOffset_Response",
+      "fields": [
+        {
+          "name": "res",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dobot_msgs_v4/srv/EndRTOffset_Response",
+      "hash_string": "RIHS01_b93923bdae155399d7f1f92f2a79cc1323b321f40def05f38080650f52036c86"
+    }
+  ]
+}

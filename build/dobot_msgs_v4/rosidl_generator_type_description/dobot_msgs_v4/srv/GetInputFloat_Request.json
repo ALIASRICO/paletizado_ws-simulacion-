@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dobot_msgs_v4/srv/GetInputFloat_Request",
+      "fields": [
+        {
+          "name": "address",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dobot_msgs_v4/srv/GetInputFloat_Request",
+      "hash_string": "RIHS01_6095e540bde480804900e3896eed94e76796bd949d05c26773edf9e6bbc5987f"
+    }
+  ]
+}

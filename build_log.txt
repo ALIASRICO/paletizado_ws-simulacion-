@@ -1,0 +1,39 @@
+Starting >>> dobot_rviz
+Starting >>> cra_description
+Starting >>> dobot_demo
+Starting >>> dobot_moveit
+Starting >>> servo_action
+Starting >>> cr_robot_ros2
+Finished <<< dobot_rviz [0.46s]
+Finished <<< cra_description [0.46s]
+Starting >>> cr10_moveit
+Starting >>> cr12_moveit
+Starting >>> cr16_moveit
+Starting >>> cr20_moveit
+Starting >>> cr30h_moveit
+Starting >>> cr3_moveit
+Starting >>> cr5_moveit
+Starting >>> cr7_moveit
+Starting >>> me6_moveit
+Starting >>> nova2_moveit
+Starting >>> nova5_moveit
+Starting >>> dobot_gazebo
+Finished <<< cr12_moveit [0.38s]
+Finished <<< cr30h_moveit [0.38s]
+Finished <<< cr20_moveit [0.39s]
+Finished <<< cr16_moveit [0.40s]
+Finished <<< nova2_moveit [0.38s]
+Finished <<< cr10_moveit [0.42s]
+Finished <<< me6_moveit [0.40s]
+Finished <<< nova5_moveit [0.40s]
+Finished <<< cr7_moveit [0.41s]
+Finished <<< cr3_moveit [0.43s]
+Finished <<< cr5_moveit [0.43s]
+Finished <<< dobot_gazebo [0.42s]
+Finished <<< servo_action [1.27s]
+Finished <<< dobot_demo [1.29s]
+Finished <<< dobot_moveit [1.30s]
+[Processing: cr_robot_ros2]
+Finished <<< cr_robot_ros2 [46.4s]
+
+Summary: 18 packages finished [46.5s]

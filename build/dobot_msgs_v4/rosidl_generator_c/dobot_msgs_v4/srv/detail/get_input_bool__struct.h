@@ -1,0 +1,102 @@
+// generated from rosidl_generator_c/resource/idl__struct.h.em
+// with input from dobot_msgs_v4:srv/GetInputBool.idl
+// generated code does not contain a copyright notice
+
+// IWYU pragma: private, include "dobot_msgs_v4/srv/get_input_bool.h"
+
+
+#ifndef DOBOT_MSGS_V4__SRV__DETAIL__GET_INPUT_BOOL__STRUCT_H_
+#define DOBOT_MSGS_V4__SRV__DETAIL__GET_INPUT_BOOL__STRUCT_H_
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+
+
+// Constants defined in the message
+
+/// Struct defined in srv/GetInputBool in the package dobot_msgs_v4.
+typedef struct dobot_msgs_v4__srv__GetInputBool_Request
+{
+  int32_t address;
+} dobot_msgs_v4__srv__GetInputBool_Request;
+
+// Struct for a sequence of dobot_msgs_v4__srv__GetInputBool_Request.
+typedef struct dobot_msgs_v4__srv__GetInputBool_Request__Sequence
+{
+  dobot_msgs_v4__srv__GetInputBool_Request * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} dobot_msgs_v4__srv__GetInputBool_Request__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'robot_return'
+#include "rosidl_runtime_c/string.h"
+
+/// Struct defined in srv/GetInputBool in the package dobot_msgs_v4.
+typedef struct dobot_msgs_v4__srv__GetInputBool_Response
+{
+  rosidl_runtime_c__String robot_return;
+  int32_t res;
+} dobot_msgs_v4__srv__GetInputBool_Response;
+
+// Struct for a sequence of dobot_msgs_v4__srv__GetInputBool_Response.
+typedef struct dobot_msgs_v4__srv__GetInputBool_Response__Sequence
+{
+  dobot_msgs_v4__srv__GetInputBool_Response * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} dobot_msgs_v4__srv__GetInputBool_Response__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+#include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  dobot_msgs_v4__srv__GetInputBool_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  dobot_msgs_v4__srv__GetInputBool_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in srv/GetInputBool in the package dobot_msgs_v4.
+typedef struct dobot_msgs_v4__srv__GetInputBool_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  dobot_msgs_v4__srv__GetInputBool_Request__Sequence request;
+  dobot_msgs_v4__srv__GetInputBool_Response__Sequence response;
+} dobot_msgs_v4__srv__GetInputBool_Event;
+
+// Struct for a sequence of dobot_msgs_v4__srv__GetInputBool_Event.
+typedef struct dobot_msgs_v4__srv__GetInputBool_Event__Sequence
+{
+  dobot_msgs_v4__srv__GetInputBool_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} dobot_msgs_v4__srv__GetInputBool_Event__Sequence;
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // DOBOT_MSGS_V4__SRV__DETAIL__GET_INPUT_BOOL__STRUCT_H_

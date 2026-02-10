@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dobot_msgs_v4/srv/VelJ_Response",
+      "fields": [
+        {
+          "name": "res",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dobot_msgs_v4/srv/VelJ_Response",
+      "hash_string": "RIHS01_83665bf7e2fc10ca9f7745613aec03e012d96cc4e70c2fb53205dc765bca178d"
+    }
+  ]
+}

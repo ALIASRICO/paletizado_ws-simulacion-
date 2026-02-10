@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dobot_msgs_v4/srv/SetFCCollision_Response",
+      "fields": [
+        {
+          "name": "res",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dobot_msgs_v4/srv/SetFCCollision_Response",
+      "hash_string": "RIHS01_a329b4acf62a9363a3d22661017a293a89be8228abf7e31bdc9af2b6c52bc2d3"
+    }
+  ]
+}

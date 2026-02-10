@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ceiling_camera">
+
+  <!-- Include our wrapper that extends official model -->
+  <xacro:include filename="$(find cra_description)/urdf/d435i_with_gazebo.urdf.xacro"/>
+
+  <!-- World link -->
+  <link name="world"/>
+
+  <!-- Mount camera in ceiling using extended model -->
+  <xacro:d435i_with_gazebo parent="world" name="camera" use_nominal_extrinsics="true">
+    <origin xyz="0 0 3.0" rpy="0 ${pi/2} 0"/>
+  </xacro:d435i_with_gazebo>
+
+</robot>

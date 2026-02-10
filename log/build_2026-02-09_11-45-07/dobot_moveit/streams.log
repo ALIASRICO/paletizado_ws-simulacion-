@@ -1,0 +1,22 @@
+[0.747s] Invoking command in '/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_moveit': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/iudc/dobot_ws/build/dobot_moveit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/iudc/dobot_ws/install/dobot_moveit/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/dobot_moveit build --build-base /home/iudc/dobot_ws/build/dobot_moveit/build install --record /home/iudc/dobot_ws/build/dobot_moveit/install.log --single-version-externally-managed install_data
+[0.883s] running egg_info
+[0.891s] writing ../../../build/dobot_moveit/dobot_moveit.egg-info/PKG-INFO
+[0.892s] writing dependency_links to ../../../build/dobot_moveit/dobot_moveit.egg-info/dependency_links.txt
+[0.892s] writing entry points to ../../../build/dobot_moveit/dobot_moveit.egg-info/entry_points.txt
+[0.892s] writing requirements to ../../../build/dobot_moveit/dobot_moveit.egg-info/requires.txt
+[0.892s] writing top-level names to ../../../build/dobot_moveit/dobot_moveit.egg-info/top_level.txt
+[0.910s] reading manifest file '../../../build/dobot_moveit/dobot_moveit.egg-info/SOURCES.txt'
+[0.910s] writing manifest file '../../../build/dobot_moveit/dobot_moveit.egg-info/SOURCES.txt'
+[0.910s] running build
+[0.910s] running build_py
+[0.910s] running install
+[0.914s] running install_lib
+[0.923s] running install_data
+[0.923s] running install_egg_info
+[0.933s] removing '/home/iudc/dobot_ws/install/dobot_moveit/lib/python3.12/site-packages/dobot_moveit-0.0.0-py3.12.egg-info' (and everything under it)
+[0.933s] Copying ../../../build/dobot_moveit/dobot_moveit.egg-info to /home/iudc/dobot_ws/install/dobot_moveit/lib/python3.12/site-packages/dobot_moveit-0.0.0-py3.12.egg-info
+[0.933s] running install_scripts
+[1.005s] Installing action_move_server script to /home/iudc/dobot_ws/install/dobot_moveit/lib/dobot_moveit
+[1.006s] Installing joint_states script to /home/iudc/dobot_ws/install/dobot_moveit/lib/dobot_moveit
+[1.006s] writing list of installed files to '/home/iudc/dobot_ws/build/dobot_moveit/install.log'
+[1.029s] Invoked command in '/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_moveit' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/iudc/dobot_ws/build/dobot_moveit/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/iudc/dobot_ws/install/dobot_moveit/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/dobot_moveit build --build-base /home/iudc/dobot_ws/build/dobot_moveit/build install --record /home/iudc/dobot_ws/build/dobot_moveit/install.log --single-version-externally-managed install_data

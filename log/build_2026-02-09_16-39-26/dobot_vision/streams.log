@@ -1,0 +1,17 @@
+[0.433s] Invoking command in '/home/iudc/dobot_ws/build/dobot_vision': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/iudc/dobot_ws/build/dobot_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/iudc/dobot_ws/install/dobot_vision/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/iudc/dobot_ws/build/dobot_vision/build --no-deps symlink_data
+[0.593s] running develop
+[0.684s] running egg_info
+[0.692s] writing dobot_vision.egg-info/PKG-INFO
+[0.692s] writing dependency_links to dobot_vision.egg-info/dependency_links.txt
+[0.692s] writing entry points to dobot_vision.egg-info/entry_points.txt
+[0.692s] writing requirements to dobot_vision.egg-info/requires.txt
+[0.692s] writing top-level names to dobot_vision.egg-info/top_level.txt
+[0.709s] reading manifest file 'dobot_vision.egg-info/SOURCES.txt'
+[0.710s] writing manifest file 'dobot_vision.egg-info/SOURCES.txt'
+[0.719s] running build_ext
+[0.719s] Creating /home/iudc/dobot_ws/install/dobot_vision/lib/python3.12/site-packages/dobot-vision.egg-link (link to .)
+[0.719s] Installing pose_publisher script to /home/iudc/dobot_ws/install/dobot_vision/lib/dobot_vision
+[0.719s] 
+[0.719s] Installed /home/iudc/dobot_ws/build/dobot_vision
+[0.719s] running symlink_data
+[0.735s] Invoked command in '/home/iudc/dobot_ws/build/dobot_vision' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/iudc/dobot_ws/build/dobot_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/iudc/dobot_ws/install/dobot_vision/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/iudc/dobot_ws/build/dobot_vision/build --no-deps symlink_data

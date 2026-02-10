@@ -1,0 +1,1 @@
+/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_gazebo/launch/gazebo_with_camera.launch.py

@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dobot_msgs_v4/srv/EnableFTSensor_Request",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dobot_msgs_v4/srv/EnableFTSensor_Request",
+      "hash_string": "RIHS01_cc0330a2a60a0f9603220e697c2f2725ac1c9b0509b09ab0ec6b75399311b7b9"
+    }
+  ]
+}

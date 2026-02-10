@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dobot_msgs_v4/srv/EnableSafeSkin_Response",
+      "fields": [
+        {
+          "name": "res",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dobot_msgs_v4/srv/EnableSafeSkin_Response",
+      "hash_string": "RIHS01_9a3fdbe8ca464ea70bf0750cec640f7b8c69e3acb6c15a79e21bd4beafb4bb1d"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+[0.661s] Invoking command in '/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/servo_action': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/iudc/dobot_ws/build/servo_action/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/iudc/dobot_ws/install/servo_action/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/servo_action build --build-base /home/iudc/dobot_ws/build/servo_action/build install --record /home/iudc/dobot_ws/build/servo_action/install.log --single-version-externally-managed install_data
+[0.819s] running egg_info
+[0.819s] creating ../../../build/servo_action/servo_action.egg-info
+[0.831s] writing ../../../build/servo_action/servo_action.egg-info/PKG-INFO
+[0.831s] writing dependency_links to ../../../build/servo_action/servo_action.egg-info/dependency_links.txt
+[0.832s] writing entry points to ../../../build/servo_action/servo_action.egg-info/entry_points.txt
+[0.832s] writing requirements to ../../../build/servo_action/servo_action.egg-info/requires.txt
+[0.832s] writing top-level names to ../../../build/servo_action/servo_action.egg-info/top_level.txt
+[0.832s] writing manifest file '../../../build/servo_action/servo_action.egg-info/SOURCES.txt'
+[0.854s] reading manifest file '../../../build/servo_action/servo_action.egg-info/SOURCES.txt'
+[0.855s] writing manifest file '../../../build/servo_action/servo_action.egg-info/SOURCES.txt'
+[0.855s] running build
+[0.855s] running build_py
+[0.855s] creating /home/iudc/dobot_ws/build/servo_action/build
+[0.855s] creating /home/iudc/dobot_ws/build/servo_action/build/lib
+[0.855s] creating /home/iudc/dobot_ws/build/servo_action/build/lib/servo_action
+[0.855s] copying servo_action/action_move_client.py -> /home/iudc/dobot_ws/build/servo_action/build/lib/servo_action
+[0.855s] copying servo_action/__init__.py -> /home/iudc/dobot_ws/build/servo_action/build/lib/servo_action
+[0.855s] copying servo_action/Joint_Position.py -> /home/iudc/dobot_ws/build/servo_action/build/lib/servo_action
+[0.855s] running install
+[0.860s] running install_lib
+[0.870s] creating /home/iudc/dobot_ws/install/servo_action/lib/python3.12/site-packages/servo_action
+[0.870s] copying /home/iudc/dobot_ws/build/servo_action/build/lib/servo_action/action_move_client.py -> /home/iudc/dobot_ws/install/servo_action/lib/python3.12/site-packages/servo_action
+[0.870s] copying /home/iudc/dobot_ws/build/servo_action/build/lib/servo_action/__init__.py -> /home/iudc/dobot_ws/install/servo_action/lib/python3.12/site-packages/servo_action
+[0.870s] copying /home/iudc/dobot_ws/build/servo_action/build/lib/servo_action/Joint_Position.py -> /home/iudc/dobot_ws/install/servo_action/lib/python3.12/site-packages/servo_action
+[0.870s] byte-compiling /home/iudc/dobot_ws/install/servo_action/lib/python3.12/site-packages/servo_action/action_move_client.py to action_move_client.cpython-312.pyc
+[0.871s] byte-compiling /home/iudc/dobot_ws/install/servo_action/lib/python3.12/site-packages/servo_action/__init__.py to __init__.cpython-312.pyc
+[0.871s] byte-compiling /home/iudc/dobot_ws/install/servo_action/lib/python3.12/site-packages/servo_action/Joint_Position.py to Joint_Position.cpython-312.pyc
+[0.871s] running install_data
+[0.871s] creating /home/iudc/dobot_ws/install/servo_action/share/ament_index
+[0.872s] creating /home/iudc/dobot_ws/install/servo_action/share/ament_index/resource_index
+[0.872s] creating /home/iudc/dobot_ws/install/servo_action/share/ament_index/resource_index/packages
+[0.872s] copying resource/servo_action -> /home/iudc/dobot_ws/install/servo_action/share/ament_index/resource_index/packages
+[0.872s] copying package.xml -> /home/iudc/dobot_ws/install/servo_action/share/servo_action
+[0.872s] running install_egg_info
+[0.883s] Copying ../../../build/servo_action/servo_action.egg-info to /home/iudc/dobot_ws/install/servo_action/lib/python3.12/site-packages/servo_action-0.0.0-py3.12.egg-info
+[0.884s] running install_scripts
+[0.963s] Installing Joint_Position script to /home/iudc/dobot_ws/install/servo_action/lib/servo_action
+[0.963s] Installing action_move_client script to /home/iudc/dobot_ws/install/servo_action/lib/servo_action
+[0.963s] writing list of installed files to '/home/iudc/dobot_ws/build/servo_action/install.log'
+[0.981s] Invoked command in '/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/servo_action' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/iudc/dobot_ws/build/servo_action/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/iudc/dobot_ws/install/servo_action/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/servo_action build --build-base /home/iudc/dobot_ws/build/servo_action/build install --record /home/iudc/dobot_ws/build/servo_action/install.log --single-version-externally-managed install_data

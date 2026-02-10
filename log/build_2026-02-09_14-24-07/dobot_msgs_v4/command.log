@@ -1,0 +1,4 @@
+Invoking command in '/home/iudc/dobot_ws/build/dobot_msgs_v4': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/iudc/dobot_ws/build/dobot_msgs_v4 -- -j24 -l24
+Invoked command in '/home/iudc/dobot_ws/build/dobot_msgs_v4' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/iudc/dobot_ws/build/dobot_msgs_v4 -- -j24 -l24
+Invoking command in '/home/iudc/dobot_ws/build/dobot_msgs_v4': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/iudc/dobot_ws/build/dobot_msgs_v4
+Invoked command in '/home/iudc/dobot_ws/build/dobot_msgs_v4' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/iudc/dobot_ws/build/dobot_msgs_v4

@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-c0b940a5a9c379788d3d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "dobot_msgs_v4__py",
+					"jsonFile" : "directory-dobot_msgs_v4__py-70963b349d2fafc0b066.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/iudc/dobot_ws/build/dobot_msgs_v4/dobot_msgs_v4__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "dobot_msgs_v4",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_dobot_msgs_v4_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_dobot_msgs_v4_egg-296032fabb5a255c6f83.json",
+					"name" : "ament_cmake_python_build_dobot_msgs_v4_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_dobot_msgs_v4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_dobot_msgs_v4-a3cc3c7a319189875f05.json",
+					"name" : "ament_cmake_python_copy_dobot_msgs_v4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4-5d63da8ffa873093e0b7.json",
+					"name" : "dobot_msgs_v4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4__cpp-4c49e5ace990933c05e5.json",
+					"name" : "dobot_msgs_v4__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "dobot_msgs_v4__py::@4db6be8d0ec81a4e2098",
+					"jsonFile" : "target-dobot_msgs_v4__py-5b4fc79360a88127c54a.json",
+					"name" : "dobot_msgs_v4__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4__rosidl_generator_c-efd652272f3a3d0d5488.json",
+					"name" : "dobot_msgs_v4__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4__rosidl_generator_py-7a5874b4103c06f72157.json",
+					"name" : "dobot_msgs_v4__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4__rosidl_generator_type_description-b74d8ffd6ea0d9b03bbd.json",
+					"name" : "dobot_msgs_v4__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4__rosidl_typesupport_c-cb73bc37b72a7407aeaa.json",
+					"name" : "dobot_msgs_v4__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4__rosidl_typesupport_cpp-16a0818a671ee5968e79.json",
+					"name" : "dobot_msgs_v4__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4__rosidl_typesupport_fastrtps_c-de5953667794444b4a75.json",
+					"name" : "dobot_msgs_v4__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4__rosidl_typesupport_fastrtps_cpp-08245091acd55871f8e2.json",
+					"name" : "dobot_msgs_v4__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4__rosidl_typesupport_introspection_c-61b8d442faf77f0c5f84.json",
+					"name" : "dobot_msgs_v4__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4__rosidl_typesupport_introspection_cpp-5aea8e0c9c4ea947b46f.json",
+					"name" : "dobot_msgs_v4__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4_s__rosidl_typesupport_c-c7bd029e9dbdfe88f091.json",
+					"name" : "dobot_msgs_v4_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4_s__rosidl_typesupport_fastrtps_c-bf6e7cd61535c1a850f1.json",
+					"name" : "dobot_msgs_v4_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4_s__rosidl_typesupport_introspection_c-f516afdbc9bda9c94e0f.json",
+					"name" : "dobot_msgs_v4_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dobot_msgs_v4_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dobot_msgs_v4_uninstall-2133cefb4d3e8edf28ce.json",
+					"name" : "dobot_msgs_v4_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-8981709f47f64e62ac17.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/iudc/dobot_ws/build/dobot_msgs_v4",
+		"source" : "/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_msgs_v4"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dobot_msgs_v4/srv/RunScript_Request",
+      "fields": [
+        {
+          "name": "project_name",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dobot_msgs_v4/srv/RunScript_Request",
+      "hash_string": "RIHS01_80af59d0d135a2867e21e75a8107a068aca7bac13ee754163ab77a274c6d3a50"
+    }
+  ]
+}
