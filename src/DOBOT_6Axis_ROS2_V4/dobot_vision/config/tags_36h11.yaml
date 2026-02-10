@@ -1,0 +1,39 @@
+# =============================================================================
+# AprilTag Configuration for Dobot CR20 Palletizing System
+# =============================================================================
+# Family 36h11: robusto, bajo false-positive rate, ideal para industria.
+# Personalizar IDs y tamaños según los tags impresos físicamente.
+# =============================================================================
+
+/**:
+    ros__parameters:
+        image_transport: raw
+        family: 36h11
+        size: 0.10                  # Tamaño por defecto del tag (borde, metros) — VERIFICAR FÍSICAMENTE
+        max_hamming: 0              # 0 = sin corrección de errores (más estricto)
+
+        detector:
+            threads: 4              # Ajustar según CPU disponible
+            decimate: 1.0           # 1.0 = resolución completa, 2.0 = mitad (más rápido)
+            blur: 0.0               # 0.0 = sin blur
+            refine: true            # Refinar bordes para mejor precisión
+            sharpening: 0.25        # Sharpening de imagen decodificada
+            debug: false            # true = genera imágenes de debug en cwd
+
+        # Método de estimación de pose 3D
+        # "pnp" usa solvePnP de OpenCV — más preciso con camera_info correcta
+        pose_estimation_method: "pnp"
+
+        # =====================================================================
+        # Tags del sistema de paletizado
+        # IMPORTANTE: Ajustar IDs y tamaños tras pruebas físicas
+        # =====================================================================
+        tag:
+            # Tags de CINTA/CONVEYOR: 10, 11, 12, 13
+            # Tags de PALET:          20, 21, 22, 23
+            ids:    [10,    11,     12,     13,     20,     21,     22,     23]
+            # Nombre del frame TF que se publicará para cada tag
+            frames: [conveyor_tag_10, conveyor_tag_11, conveyor_tag_12, conveyor_tag_13,
+                     palet_tag_20,   palet_tag_21,   palet_tag_22,   palet_tag_23]
+            # Tamaño individual de cada tag (metros) — MEDIR FÍSICAMENTE
+            sizes:  [0.10,  0.10,   0.10,   0.10,   0.10,   0.10,   0.10,   0.10]

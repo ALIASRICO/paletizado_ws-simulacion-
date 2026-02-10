@@ -1,0 +1,24 @@
+# ROS2 build files
+build/
+install/
+log/
+*.pyc
+__pycache__/
+*.egg-info/
+.colcon_build_cache/
+.colcon_install_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local settings
+.venv/
+venv/
+env/

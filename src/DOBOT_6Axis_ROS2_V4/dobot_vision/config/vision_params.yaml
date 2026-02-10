@@ -1,0 +1,50 @@
+# =============================================================================
+# Vision Parameters for Dobot CR20 Palletizing System
+# =============================================================================
+# Estos parámetros son consumidos por pose_publisher node.
+# REGLA #3: Todos los valores son configurables, NADA hardcodeado.
+# =============================================================================
+
+pose_publisher:
+    ros__parameters:
+        # --- Suscripción ---
+        # Topic donde apriltag_ros publica las detecciones
+        detection_topic: "/apriltag/detections"
+
+        # --- Publicación ---
+        # Topic donde este nodo publica las poses procesadas
+        pose_topic: "/vision/tag_poses"
+
+        # --- Frames TF ---
+        # Frame de referencia para las poses publicadas (base del robot)
+        reference_frame: "world"
+        # Frame de la cámara (debe coincidir con el URDF)
+        camera_frame: "camera_color_optical_frame"
+
+        # --- Filtrado ---
+        # Confianza mínima para aceptar una detección (decision_margin del detector)
+        min_decision_margin: 30.0
+        # Tamaño máximo de la cola de poses para promediar (reduce ruido)
+        pose_smoothing_window: 5
+        # Frecuencia máxima de publicación (Hz). 0 = publicar cada detección
+        max_publish_rate: 10.0
+
+        # --- Tags de interés ---
+        # Solo procesar estos IDs (lista vacía = procesar todos)
+        # Tags CINTA: 10-13, Tags PALET: 20-23
+        target_tag_ids: [10, 11, 12, 13, 20, 21, 22, 23]
+
+        # --- Seguridad (REGLA #1: Safety First) ---
+        # Bounding box del espacio de trabajo válido (metros, en frame world)
+        # Detecciones fuera de este volumen se descartan como espurias
+        workspace_bounds:
+            x_min: -1.5
+            x_max:  1.5
+            y_min: -1.5
+            y_max:  1.5
+            z_min:  0.0     # Nada debajo de la mesa
+            z_max:  2.5     # Nada por encima de la cámara
+
+        # --- Debug ---
+        publish_tf: true        # Publicar transforms de tags detectados
+        verbose: false          # Log detallado de cada detección
