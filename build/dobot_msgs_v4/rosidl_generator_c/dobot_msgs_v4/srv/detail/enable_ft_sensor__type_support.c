@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/enable_ft_sensor__struct.h"
 #include "dobot_msgs_v4/srv/detail/enable_ft_sensor__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/enable_ft_sensor__type_support.h"
+#include "dobot_msgs_v4/srv/detail/enable_ft_sensor__struct.h"
 
 #ifdef __cplusplus
 extern "C"

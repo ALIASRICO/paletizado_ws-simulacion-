@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/speed_factor__struct.h"
 #include "dobot_msgs_v4/srv/detail/speed_factor__functions.h"
+#include "dobot_msgs_v4/srv/detail/speed_factor__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/speed_factor__type_support.h"
 

@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "dobot_msgs_v4/srv/detail/fc_set_damping__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/fc_set_damping__type_support.h"
 #include "dobot_msgs_v4/srv/detail/fc_set_damping__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

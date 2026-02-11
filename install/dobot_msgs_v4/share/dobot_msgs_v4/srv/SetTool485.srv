@@ -1,6 +1,1 @@
-int32  baudrate
-string parity
-int32  stop
-int32  identify
----
-int32 res
+/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_msgs_v4/srv/SetTool485.srv

@@ -96,7 +96,7 @@ clean: CMakeFiles/dobot_msgs_v4__rosidl_typesupport_introspection_c.dir/clean
 clean: CMakeFiles/dobot_msgs_v4__rosidl_typesupport_c.dir/clean
 clean: CMakeFiles/dobot_msgs_v4__rosidl_typesupport_introspection_cpp.dir/clean
 clean: CMakeFiles/dobot_msgs_v4__rosidl_typesupport_cpp.dir/clean
-clean: CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/clean
+clean: CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/clean
 clean: CMakeFiles/ament_cmake_python_build_dobot_msgs_v4_egg.dir/clean
 clean: CMakeFiles/dobot_msgs_v4__rosidl_generator_py.dir/clean
 clean: CMakeFiles/dobot_msgs_v4_s__rosidl_typesupport_fastrtps_c.dir/clean
@@ -444,36 +444,36 @@ CMakeFiles/dobot_msgs_v4__rosidl_typesupport_cpp.dir/clean:
 .PHONY : CMakeFiles/dobot_msgs_v4__rosidl_typesupport_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir
+# Target rules for target CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir
 
 # All Build rule for target.
-CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/build.make CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/build.make CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles --progress-num= "Built target ament_cmake_python_copy_dobot_msgs_v4"
-.PHONY : CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/all
+CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/build.make CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/build.make CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles --progress-num= "Built target ament_cmake_python_symlink_dobot_msgs_v4"
+.PHONY : CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/rule: cmake_check_build_system
+CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles 0
-.PHONY : CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/rule
+.PHONY : CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/rule
 
 # Convenience name for target.
-ament_cmake_python_copy_dobot_msgs_v4: CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/rule
-.PHONY : ament_cmake_python_copy_dobot_msgs_v4
+ament_cmake_python_symlink_dobot_msgs_v4: CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/rule
+.PHONY : ament_cmake_python_symlink_dobot_msgs_v4
 
 # clean rule for target.
-CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/build.make CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/clean
-.PHONY : CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/clean
+CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/build.make CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/clean
+.PHONY : CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ament_cmake_python_build_dobot_msgs_v4_egg.dir
 
 # All Build rule for target.
-CMakeFiles/ament_cmake_python_build_dobot_msgs_v4_egg.dir/all: CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/all
+CMakeFiles/ament_cmake_python_build_dobot_msgs_v4_egg.dir/all: CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_dobot_msgs_v4_egg.dir/build.make CMakeFiles/ament_cmake_python_build_dobot_msgs_v4_egg.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_dobot_msgs_v4_egg.dir/build.make CMakeFiles/ament_cmake_python_build_dobot_msgs_v4_egg.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles --progress-num= "Built target ament_cmake_python_build_dobot_msgs_v4_egg"

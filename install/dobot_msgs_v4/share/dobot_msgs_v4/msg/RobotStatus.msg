@@ -1,2 +1,1 @@
-bool is_enable
-bool is_connected
+/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_msgs_v4/msg/RobotStatus.msg

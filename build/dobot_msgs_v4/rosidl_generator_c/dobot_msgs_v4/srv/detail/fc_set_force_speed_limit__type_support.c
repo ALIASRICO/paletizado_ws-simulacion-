@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/fc_set_force_speed_limit__functions.h"
 #include "dobot_msgs_v4/srv/detail/fc_set_force_speed_limit__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/fc_set_force_speed_limit__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/fc_set_force_speed_limit__functions.h"
 
 #ifdef __cplusplus
 extern "C"

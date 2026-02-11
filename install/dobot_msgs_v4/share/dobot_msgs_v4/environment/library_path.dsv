@@ -1,1 +1,1 @@
-prepend-non-duplicate;LD_LIBRARY_PATH;lib
+/home/iudc/dobot_ws/build/dobot_msgs_v4/ament_cmake_environment_hooks/library_path.dsv

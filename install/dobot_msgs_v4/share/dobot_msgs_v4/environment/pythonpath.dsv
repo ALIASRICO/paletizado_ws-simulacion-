@@ -1,1 +1,1 @@
-prepend-non-duplicate;PYTHONPATH;lib/python3.12/site-packages
+/home/iudc/dobot_ws/build/dobot_msgs_v4/ament_cmake_environment_hooks/pythonpath.dsv

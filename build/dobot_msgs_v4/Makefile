@@ -328,17 +328,17 @@ dobot_msgs_v4__rosidl_typesupport_cpp/fast:
 .PHONY : dobot_msgs_v4__rosidl_typesupport_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_copy_dobot_msgs_v4
+# Target rules for targets named ament_cmake_python_symlink_dobot_msgs_v4
 
 # Build rule for target.
-ament_cmake_python_copy_dobot_msgs_v4: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_dobot_msgs_v4
-.PHONY : ament_cmake_python_copy_dobot_msgs_v4
+ament_cmake_python_symlink_dobot_msgs_v4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_dobot_msgs_v4
+.PHONY : ament_cmake_python_symlink_dobot_msgs_v4
 
 # fast build rule for target.
-ament_cmake_python_copy_dobot_msgs_v4/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/build.make CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir/build
-.PHONY : ament_cmake_python_copy_dobot_msgs_v4/fast
+ament_cmake_python_symlink_dobot_msgs_v4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/build.make CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir/build
+.PHONY : ament_cmake_python_symlink_dobot_msgs_v4/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_dobot_msgs_v4_egg
@@ -30024,7 +30024,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_dobot_msgs_v4_egg"
-	@echo "... ament_cmake_python_copy_dobot_msgs_v4"
+	@echo "... ament_cmake_python_symlink_dobot_msgs_v4"
 	@echo "... dobot_msgs_v4"
 	@echo "... dobot_msgs_v4__cpp"
 	@echo "... dobot_msgs_v4__py"

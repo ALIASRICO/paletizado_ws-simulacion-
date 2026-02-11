@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/get_input_bool__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "dobot_msgs_v4/srv/detail/get_input_bool__functions.h"
 #include "dobot_msgs_v4/srv/detail/get_input_bool__type_support.h"
+#include "dobot_msgs_v4/srv/detail/get_input_bool__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/get_input_bool__struct.h"
 
 #ifdef __cplusplus
 extern "C"

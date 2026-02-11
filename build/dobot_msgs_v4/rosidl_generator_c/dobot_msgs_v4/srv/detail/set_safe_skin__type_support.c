@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/set_safe_skin__struct.h"
 #include "dobot_msgs_v4/srv/detail/set_safe_skin__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/set_safe_skin__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/set_safe_skin__struct.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/get_coils__functions.h"
-#include "dobot_msgs_v4/srv/detail/get_coils__type_support.h"
 #include "dobot_msgs_v4/srv/detail/get_coils__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/get_coils__type_support.h"
+#include "dobot_msgs_v4/srv/detail/get_coils__functions.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "dobot_msgs_v4/srv/detail/modbus_close__type_support.h"
-#include "dobot_msgs_v4/srv/detail/modbus_close__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/modbus_close__struct.h"
 #include "dobot_msgs_v4/srv/detail/modbus_close__functions.h"
 
 #ifdef __cplusplus

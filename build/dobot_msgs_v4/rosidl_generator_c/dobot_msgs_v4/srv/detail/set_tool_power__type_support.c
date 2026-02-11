@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "dobot_msgs_v4/srv/detail/set_tool_power__type_support.h"
 #include "dobot_msgs_v4/srv/detail/set_tool_power__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/set_tool_power__struct.h"
-#include "dobot_msgs_v4/srv/detail/set_tool_power__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

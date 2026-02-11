@@ -1,2 +1,1 @@
-source;share/cra_description/environment/ament_prefix_path.sh
-source;share/cra_description/environment/path.sh
+/home/iudc/dobot_ws/build/cra_description/ament_cmake_environment_hooks/local_setup.dsv

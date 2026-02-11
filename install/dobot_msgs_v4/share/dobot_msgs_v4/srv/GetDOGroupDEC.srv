@@ -1,5 +1,1 @@
-int32 group
-int32 value
----
-string robot_return
-int32 res
+/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_msgs_v4/srv/GetDOGroupDEC.srv

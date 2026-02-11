@@ -6,8 +6,8 @@
 
 #include "dobot_msgs_v4/srv/detail/set_fc_collision__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "dobot_msgs_v4/srv/detail/set_fc_collision__type_support.h"
 #include "dobot_msgs_v4/srv/detail/set_fc_collision__functions.h"
+#include "dobot_msgs_v4/srv/detail/set_fc_collision__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

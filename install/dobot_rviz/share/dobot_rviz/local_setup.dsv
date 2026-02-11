@@ -1,2 +1,1 @@
-source;share/dobot_rviz/environment/ament_prefix_path.sh
-source;share/dobot_rviz/environment/path.sh
+/home/iudc/dobot_ws/build/dobot_rviz/ament_cmake_environment_hooks/local_setup.dsv

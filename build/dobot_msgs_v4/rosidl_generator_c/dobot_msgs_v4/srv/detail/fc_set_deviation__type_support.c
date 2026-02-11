@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/fc_set_deviation__functions.h"
+#include "dobot_msgs_v4/srv/detail/fc_set_deviation__type_support.h"
 #include "dobot_msgs_v4/srv/detail/fc_set_deviation__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "dobot_msgs_v4/srv/detail/fc_set_deviation__type_support.h"
+#include "dobot_msgs_v4/srv/detail/fc_set_deviation__functions.h"
 
 #ifdef __cplusplus
 extern "C"

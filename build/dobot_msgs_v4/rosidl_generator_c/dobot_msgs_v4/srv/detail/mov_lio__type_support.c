@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "dobot_msgs_v4/srv/detail/mov_lio__type_support.h"
-#include "dobot_msgs_v4/srv/detail/mov_lio__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/mov_lio__struct.h"
 #include "dobot_msgs_v4/srv/detail/mov_lio__functions.h"
 
 #ifdef __cplusplus

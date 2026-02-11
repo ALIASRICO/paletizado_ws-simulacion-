@@ -10,7 +10,7 @@
 /home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles/dobot_msgs_v4__rosidl_typesupport_c.dir
 /home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles/dobot_msgs_v4__rosidl_typesupport_introspection_cpp.dir
 /home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles/dobot_msgs_v4__rosidl_typesupport_cpp.dir
-/home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles/ament_cmake_python_copy_dobot_msgs_v4.dir
+/home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles/ament_cmake_python_symlink_dobot_msgs_v4.dir
 /home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles/ament_cmake_python_build_dobot_msgs_v4_egg.dir
 /home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles/dobot_msgs_v4__rosidl_generator_py.dir
 /home/iudc/dobot_ws/build/dobot_msgs_v4/CMakeFiles/dobot_msgs_v4_s__rosidl_typesupport_fastrtps_c.dir

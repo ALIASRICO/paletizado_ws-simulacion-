@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/start_rt_offset__type_support.h"
 #include "dobot_msgs_v4/srv/detail/start_rt_offset__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/start_rt_offset__type_support.h"
 #include "dobot_msgs_v4/srv/detail/start_rt_offset__functions.h"
 
 #ifdef __cplusplus

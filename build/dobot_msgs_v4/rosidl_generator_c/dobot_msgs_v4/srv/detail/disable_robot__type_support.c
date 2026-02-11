@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "dobot_msgs_v4/srv/detail/disable_robot__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/disable_robot__type_support.h"
 #include "dobot_msgs_v4/srv/detail/disable_robot__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "dobot_msgs_v4/srv/detail/disable_robot__functions.h"
 
 #ifdef __cplusplus
 extern "C"

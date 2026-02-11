@@ -1,2 +1,1 @@
-source;share/cr20_moveit/environment/ament_prefix_path.sh
-source;share/cr20_moveit/environment/path.sh
+/home/iudc/dobot_ws/build/cr20_moveit/ament_cmake_environment_hooks/local_setup.dsv

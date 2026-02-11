@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "dobot_msgs_v4/srv/detail/do_instant__functions.h"
+#include "dobot_msgs_v4/srv/detail/do_instant__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/do_instant__type_support.h"
-#include "dobot_msgs_v4/srv/detail/do_instant__struct.h"
 
 #ifdef __cplusplus
 extern "C"

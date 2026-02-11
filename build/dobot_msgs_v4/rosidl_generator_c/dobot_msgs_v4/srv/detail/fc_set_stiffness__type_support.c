@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/fc_set_stiffness__struct.h"
 #include "dobot_msgs_v4/srv/detail/fc_set_stiffness__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/fc_set_stiffness__struct.h"
 #include "dobot_msgs_v4/srv/detail/fc_set_stiffness__functions.h"
 
 #ifdef __cplusplus

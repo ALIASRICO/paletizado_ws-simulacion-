@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/calc_user__struct.h"
 #include "dobot_msgs_v4/srv/detail/calc_user__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/calc_user__type_support.h"
+#include "dobot_msgs_v4/srv/detail/calc_user__struct.h"
 
 #ifdef __cplusplus
 extern "C"

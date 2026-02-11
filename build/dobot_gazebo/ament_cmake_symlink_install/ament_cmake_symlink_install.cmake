@@ -315,14 +315,14 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "launch" "DESTINATION" "share/dobot_gazebo")
-ament_cmake_symlink_install_directory("/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_gazebo" DIRECTORY "launch" "DESTINATION" "share/dobot_gazebo")
-
 # install(DIRECTORY "worlds" "DESTINATION" "share/dobot_gazebo")
 ament_cmake_symlink_install_directory("/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_gazebo" DIRECTORY "worlds" "DESTINATION" "share/dobot_gazebo")
 
 # install(DIRECTORY "config" "DESTINATION" "share/dobot_gazebo")
 ament_cmake_symlink_install_directory("/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_gazebo" DIRECTORY "config" "DESTINATION" "share/dobot_gazebo")
+
+# install(DIRECTORY "models" "DESTINATION" "share/dobot_gazebo")
+ament_cmake_symlink_install_directory("/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_gazebo" DIRECTORY "models" "DESTINATION" "share/dobot_gazebo")
 
 # install(FILES "/home/iudc/dobot_ws/build/dobot_gazebo/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dobot_gazebo" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_gazebo" FILES "/home/iudc/dobot_ws/build/dobot_gazebo/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dobot_gazebo" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

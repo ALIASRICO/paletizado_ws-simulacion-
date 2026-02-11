@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/get_hold_regs__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/get_hold_regs__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/get_hold_regs__struct.h"
+#include "dobot_msgs_v4/srv/detail/get_hold_regs__functions.h"
 
 #ifdef __cplusplus
 extern "C"

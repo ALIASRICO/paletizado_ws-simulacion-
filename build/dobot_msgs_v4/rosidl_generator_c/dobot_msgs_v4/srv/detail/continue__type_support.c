@@ -6,8 +6,8 @@
 
 #include "dobot_msgs_v4/srv/detail/continue__type_support.h"
 #include "dobot_msgs_v4/srv/detail/continue__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/continue__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

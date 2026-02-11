@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/rel_joint_mov_j__functions.h"
+#include "dobot_msgs_v4/srv/detail/rel_joint_mov_j__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/rel_joint_mov_j__type_support.h"
-#include "dobot_msgs_v4/srv/detail/rel_joint_mov_j__struct.h"
+#include "dobot_msgs_v4/srv/detail/rel_joint_mov_j__functions.h"
 
 #ifdef __cplusplus
 extern "C"

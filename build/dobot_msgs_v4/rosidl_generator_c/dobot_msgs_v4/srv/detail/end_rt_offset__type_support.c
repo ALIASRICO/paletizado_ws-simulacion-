@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "dobot_msgs_v4/srv/detail/end_rt_offset__functions.h"
 #include "dobot_msgs_v4/srv/detail/end_rt_offset__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/end_rt_offset__struct.h"
-#include "dobot_msgs_v4/srv/detail/end_rt_offset__functions.h"
 
 #ifdef __cplusplus
 extern "C"

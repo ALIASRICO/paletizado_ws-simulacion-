@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "dobot_msgs_v4/srv/detail/di_group_dec__struct.h"
-#include "dobot_msgs_v4/srv/detail/di_group_dec__type_support.h"
 #include "dobot_msgs_v4/srv/detail/di_group_dec__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/di_group_dec__type_support.h"
+#include "dobot_msgs_v4/srv/detail/di_group_dec__struct.h"
 
 #ifdef __cplusplus
 extern "C"

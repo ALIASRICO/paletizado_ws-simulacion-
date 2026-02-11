@@ -1,4 +1,1 @@
-string axis_id
-string[] param_value
----
-int32 res
+/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_msgs_v4/srv/MoveJog.srv

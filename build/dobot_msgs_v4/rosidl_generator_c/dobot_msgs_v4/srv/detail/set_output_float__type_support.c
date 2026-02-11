@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "dobot_msgs_v4/srv/detail/set_output_float__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/set_output_float__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/set_output_float__functions.h"
 
 #ifdef __cplusplus

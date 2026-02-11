@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/drag_sensivity__type_support.h"
-#include "dobot_msgs_v4/srv/detail/drag_sensivity__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/drag_sensivity__struct.h"
+#include "dobot_msgs_v4/srv/detail/drag_sensivity__type_support.h"
 #include "dobot_msgs_v4/srv/detail/drag_sensivity__functions.h"
 
 #ifdef __cplusplus

@@ -1,6 +1,1 @@
-float64 x
-float64 y
-float64 z
-float64 rx
-float64 ry
-float64 rz
+/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_msgs_v4/msg/ToolVectorActual.msg

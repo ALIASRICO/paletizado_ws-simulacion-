@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "dobot_msgs_v4/srv/detail/pause__functions.h"
-#include "dobot_msgs_v4/srv/detail/pause__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/pause__struct.h"
+#include "dobot_msgs_v4/srv/detail/pause__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

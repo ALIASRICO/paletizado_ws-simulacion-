@@ -1,4 +1,1 @@
-float64 force
-float64 torque
----
-int32 res
+/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_msgs_v4/srv/SetFCCollision.srv

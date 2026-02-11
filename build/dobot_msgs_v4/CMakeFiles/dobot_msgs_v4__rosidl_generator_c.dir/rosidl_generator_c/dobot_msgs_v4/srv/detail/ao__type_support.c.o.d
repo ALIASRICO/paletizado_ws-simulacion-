@@ -25,8 +25,8 @@ CMakeFiles/dobot_msgs_v4__rosidl_generator_c.dir/rosidl_generator_c/dobot_msgs_v
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
- /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_generator_c/dobot_msgs_v4/srv/detail/ao__type_support.h \
+ /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_generator_c/dobot_msgs_v4/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h \

@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/set_coils__functions.h"
 #include "dobot_msgs_v4/srv/detail/set_coils__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/set_coils__functions.h"
 #include "dobot_msgs_v4/srv/detail/set_coils__struct.h"
 
 #ifdef __cplusplus

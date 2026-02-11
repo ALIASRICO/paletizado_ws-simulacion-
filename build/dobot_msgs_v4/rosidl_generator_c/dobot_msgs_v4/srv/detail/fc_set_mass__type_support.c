@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/fc_set_mass__functions.h"
-#include "dobot_msgs_v4/srv/detail/fc_set_mass__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/fc_set_mass__struct.h"
+#include "dobot_msgs_v4/srv/detail/fc_set_mass__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/fc_set_mass__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

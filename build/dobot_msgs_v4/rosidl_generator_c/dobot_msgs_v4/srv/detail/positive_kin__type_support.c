@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/positive_kin__functions.h"
 #include "dobot_msgs_v4/srv/detail/positive_kin__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/positive_kin__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/positive_kin__functions.h"
 
 #ifdef __cplusplus
 extern "C"

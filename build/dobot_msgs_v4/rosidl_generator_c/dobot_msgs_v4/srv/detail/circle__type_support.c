@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/circle__functions.h"
 #include "dobot_msgs_v4/srv/detail/circle__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/circle__type_support.h"
+#include "dobot_msgs_v4/srv/detail/circle__functions.h"
 
 #ifdef __cplusplus
 extern "C"

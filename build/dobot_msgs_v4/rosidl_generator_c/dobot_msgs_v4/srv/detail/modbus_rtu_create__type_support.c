@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "dobot_msgs_v4/srv/detail/modbus_rtu_create__type_support.h"
-#include "dobot_msgs_v4/srv/detail/modbus_rtu_create__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/modbus_rtu_create__functions.h"
+#include "dobot_msgs_v4/srv/detail/modbus_rtu_create__struct.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/servo_j__type_support.h"
 #include "dobot_msgs_v4/srv/detail/servo_j__struct.h"
 #include "dobot_msgs_v4/srv/detail/servo_j__functions.h"
-#include "dobot_msgs_v4/srv/detail/servo_j__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

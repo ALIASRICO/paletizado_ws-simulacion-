@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/start_path__type_support.h"
+#include "dobot_msgs_v4/srv/detail/start_path__struct.h"
 #include "dobot_msgs_v4/srv/detail/start_path__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "dobot_msgs_v4/srv/detail/start_path__struct.h"
+#include "dobot_msgs_v4/srv/detail/start_path__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

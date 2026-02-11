@@ -1,8 +1,0 @@
-source;share/me6_moveit/hook/cmake_prefix_path.ps1
-source;share/me6_moveit/hook/cmake_prefix_path.dsv
-source;share/me6_moveit/hook/cmake_prefix_path.sh
-source;share/me6_moveit/local_setup.bash
-source;share/me6_moveit/local_setup.dsv
-source;share/me6_moveit/local_setup.ps1
-source;share/me6_moveit/local_setup.sh
-source;share/me6_moveit/local_setup.zsh

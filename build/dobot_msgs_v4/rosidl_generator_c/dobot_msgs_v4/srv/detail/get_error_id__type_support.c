@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/get_error_id__struct.h"
 #include "dobot_msgs_v4/srv/detail/get_error_id__type_support.h"
 #include "dobot_msgs_v4/srv/detail/get_error_id__functions.h"
+#include "dobot_msgs_v4/srv/detail/get_error_id__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus

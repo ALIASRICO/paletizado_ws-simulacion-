@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/mov_l__struct.h"
-#include "dobot_msgs_v4/srv/detail/mov_l__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/mov_l__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/mov_l__type_support.h"
+#include "dobot_msgs_v4/srv/detail/mov_l__struct.h"
 
 #ifdef __cplusplus
 extern "C"

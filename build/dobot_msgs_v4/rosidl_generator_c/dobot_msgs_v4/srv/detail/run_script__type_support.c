@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/srv/detail/run_script__functions.h"
 #include "dobot_msgs_v4/srv/detail/run_script__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/run_script__struct.h"
+#include "dobot_msgs_v4/srv/detail/run_script__functions.h"
 
 #ifdef __cplusplus
 extern "C"

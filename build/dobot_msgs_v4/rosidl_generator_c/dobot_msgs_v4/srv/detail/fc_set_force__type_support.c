@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "dobot_msgs_v4/srv/detail/fc_set_force__type_support.h"
-#include "dobot_msgs_v4/srv/detail/fc_set_force__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/srv/detail/fc_set_force__struct.h"
 #include "dobot_msgs_v4/srv/detail/fc_set_force__functions.h"
 
 #ifdef __cplusplus

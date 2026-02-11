@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "dobot_msgs_v4/msg/detail/tool_vector_actual__struct.h"
 #include "dobot_msgs_v4/msg/detail/tool_vector_actual__type_support.h"
-#include "dobot_msgs_v4/msg/detail/tool_vector_actual__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "dobot_msgs_v4/msg/detail/tool_vector_actual__struct.h"
+#include "dobot_msgs_v4/msg/detail/tool_vector_actual__functions.h"
 
 #ifdef __cplusplus
 extern "C"

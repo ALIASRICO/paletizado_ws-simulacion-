@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/start_drag__type_support.h"
-#include "dobot_msgs_v4/srv/detail/start_drag__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/start_drag__functions.h"
+#include "dobot_msgs_v4/srv/detail/start_drag__struct.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "dobot_msgs_v4/srv/detail/brake_control__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "dobot_msgs_v4/srv/detail/brake_control__struct.h"
 #include "dobot_msgs_v4/srv/detail/brake_control__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "dobot_msgs_v4/srv/detail/brake_control__type_support.h"
 
 #ifdef __cplusplus
 extern "C"
