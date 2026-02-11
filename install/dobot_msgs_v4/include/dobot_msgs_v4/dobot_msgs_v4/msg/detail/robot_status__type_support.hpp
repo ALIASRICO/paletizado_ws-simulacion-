@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_generator_cpp/dobot_msgs_v4/msg/detail/robot_status__type_support.hpp

@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_typesupport_fastrtps_c/dobot_msgs_v4/srv/detail/rel_mov_l_tool__rosidl_typesupport_fastrtps_c.h

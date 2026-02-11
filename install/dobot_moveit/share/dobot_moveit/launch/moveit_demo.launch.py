@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_moveit/launch/moveit_demo.launch.py

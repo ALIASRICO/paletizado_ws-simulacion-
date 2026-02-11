@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_typesupport_fastrtps_c/dobot_msgs_v4/srv/detail/modbus_rtu_create__rosidl_typesupport_fastrtps_c.h

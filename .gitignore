@@ -1,24 +1,120 @@
-# ROS2 build files
+# ===========================================
+# ROS2 Git Ignore Professional
+# Sistema de Paletizado - DOBOT CR20V
+# ===========================================
+
+# ------------------------------------------
+# Build Artifacts
+# ------------------------------------------
 build/
 install/
 log/
-*.pyc
-__pycache__/
-*.egg-info/
-.colcon_build_cache/
-.colcon_install_cache/
 
-# IDE
+# ------------------------------------------
+# Python
+# ------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg
+MANIFEST
+
+# ------------------------------------------
+# C/C++
+# ------------------------------------------
+*.o
+*.obj
+*.out
+*.a
+*.la
+*.lo
+*.so
+*.dylib
+*.dll
+*.ninja
+*.cmake
+
+# ------------------------------------------
+# IDEs and Editors
+# ------------------------------------------
 .vscode/
 .idea/
 *.swp
+*.swo
 *~
+.project
+.classpath
+.settings/
+*.sublime-*
 
-# OS
+# ------------------------------------------
+# OS Generated
+# ------------------------------------------
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+*.bak
 
-# Local settings
-.venv/
-venv/
-env/
+# ------------------------------------------
+# Colcon
+# ------------------------------------------
+*.user_data/
+*.AMENT_IGNORE
+COLCON_IGNORE
+
+# ------------------------------------------
+# Documentation (generated)
+# ------------------------------------------
+*.dox
+*.pdf
+*.ps
+
+# ------------------------------------------
+# Temporary Files
+# ------------------------------------------
+tmp/
+temp/
+*.tmp
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# ------------------------------------------
+# ROS Specific
+# ------------------------------------------
+*.bag
+*.db3
+*.mcap
+*.pcd
+*.ply
+nav2_msgs/
+geometry2/
+
+# ------------------------------------------
+# Large Binary Files (use Git LFS)
+# ------------------------------------------
+# *.STL
+# *.DAE
+# *.obj
+# *.png
+# *.jpg
+# *.pdf
+# *.gz

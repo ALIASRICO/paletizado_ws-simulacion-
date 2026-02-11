@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_generator_cpp/dobot_msgs_v4/srv/detail/fc_set_force__struct.hpp

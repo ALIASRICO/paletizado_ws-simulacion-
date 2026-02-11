@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_generator_cpp/dobot_msgs_v4/srv/detail/set_safe_wall_enable__traits.hpp

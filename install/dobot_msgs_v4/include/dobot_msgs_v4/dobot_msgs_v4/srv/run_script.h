@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_generator_c/dobot_msgs_v4/srv/run_script.h

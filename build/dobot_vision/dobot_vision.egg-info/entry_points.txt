@@ -1,4 +1,0 @@
-[console_scripts]
-calibration_node = dobot_vision.calibration_node:main
-pose_publisher = dobot_vision.pose_publisher:main
-vision_display = dobot_vision.vision_display:main

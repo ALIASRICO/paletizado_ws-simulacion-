@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/cr20_moveit/launch/dobot_moveit.launch.py

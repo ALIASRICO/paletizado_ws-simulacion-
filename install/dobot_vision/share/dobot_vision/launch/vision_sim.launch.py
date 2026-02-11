@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_vision/launch/vision_sim.launch.py

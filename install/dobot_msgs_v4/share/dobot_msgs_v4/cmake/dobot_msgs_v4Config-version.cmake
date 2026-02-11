@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_msgs_v4/ament_cmake_core/dobot_msgs_v4Config-version.cmake

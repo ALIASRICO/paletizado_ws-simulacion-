@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_typesupport_introspection_cpp/dobot_msgs_v4/srv/detail/tool_do_instant__rosidl_typesupport_introspection_cpp.hpp

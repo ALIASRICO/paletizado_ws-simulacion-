@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_typesupport_introspection_c/dobot_msgs_v4/srv/detail/mov_jio__rosidl_typesupport_introspection_c.h

@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_generator_c/dobot_msgs_v4/srv/detail/calc_user__struct.h

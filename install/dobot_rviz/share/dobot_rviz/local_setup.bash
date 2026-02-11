@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_rviz/ament_cmake_environment_hooks/local_setup.bash

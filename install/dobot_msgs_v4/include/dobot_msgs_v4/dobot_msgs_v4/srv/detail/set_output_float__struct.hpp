@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/build/dobot_msgs_v4/rosidl_generator_cpp/dobot_msgs_v4/srv/detail/set_output_float__struct.hpp

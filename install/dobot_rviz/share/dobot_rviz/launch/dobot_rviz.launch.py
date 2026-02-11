@@ -1,1 +1,0 @@
-/home/iudc/dobot_ws/src/DOBOT_6Axis_ROS2_V4/dobot_rviz/launch/dobot_rviz.launch.py
