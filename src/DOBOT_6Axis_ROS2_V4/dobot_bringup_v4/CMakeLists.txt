@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(cr_robot_ros2)
+project(dobot_bringup_v4)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -23,7 +23,7 @@ find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(dobot_msgs_v4 REQUIRED)
 
-add_executable(${PROJECT_NAME}_node
+add_executable(dobot_bringup_v4_node
   src/main.cpp
   src/cr_robot_ros2.cpp
   src/command.cpp
@@ -31,12 +31,12 @@ add_executable(${PROJECT_NAME}_node
   src/parseTool.cpp
 )
 
-target_include_directories(${PROJECT_NAME}_node PUBLIC
+target_include_directories(dobot_bringup_v4_node PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
 )
 
-ament_target_dependencies(${PROJECT_NAME}_node
+ament_target_dependencies(dobot_bringup_v4_node
   rclcpp
   rclcpp_action
   std_msgs
@@ -44,10 +44,10 @@ ament_target_dependencies(${PROJECT_NAME}_node
   dobot_msgs_v4
 )
 
-target_link_libraries(${PROJECT_NAME}_node pthread)
+target_link_libraries(dobot_bringup_v4_node pthread)
 
-install(TARGETS ${PROJECT_NAME}_node
-  DESTINATION lib/${PROJECT_NAME})
+install(TARGETS dobot_bringup_v4_node
+  DESTINATION lib/dobot_bringup_v4)
 
 install(DIRECTORY launch config
   DESTINATION share/${PROJECT_NAME})

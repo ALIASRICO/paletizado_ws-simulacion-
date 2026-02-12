@@ -4,11 +4,12 @@ calibration_node.py — Calibración cámara→robot para Dobot CR20 Palletizing
 
 Proceso interactivo:
   1. La cámara detecta los 8 AprilTags (10-13 cinta, 20-23 palet)
-  2. El operador mueve el TCP del robot al centro de cada tag (teach/drag)
-  3. Para cada tag: se registra (X_cam, Y_cam) y (X_rob, Y_rob)
-  4. Se calcula la transformación Afín 2D: cam → robot
-  5. Se miden Z_pick (conveyor) y Z_palet (base palet)
-  6. Se guarda calibration.yaml
+  2. Para cada tag: primero se recolectan N muestras de cámara
+  3. Luego el operador mueve el TCP del robot al centro de cada tag (teach/drag)
+  4. Se registra (X_cam, Y_cam) y (X_rob, Y_rob)
+  5. Se calcula la transformación Afín 2D: cam → robot
+  6. Se miden Z_pick (conveyor) y Z_palet (base palet)
+  7. Se guarda calibration.yaml
 
 Uso:
   1. Lanzar driver del robot
@@ -268,6 +269,50 @@ class CalibrationNode(Node):
         return A, t, error_rms
 
     # ─────────────────────────────────────────────────────────────
+    # Recolectar TODAS las muestras de cámara antes de mover el brazo
+    # ─────────────────────────────────────────────────────────────
+    def _collect_all_camera_samples(
+        self, available_tags: List[int]
+    ) -> Dict[int, Tuple[float, float]]:
+        """
+        Recolecta las N muestras de cámara para TODOS los tags disponibles
+        ANTES de que el operador mueva el brazo a ningún lado.
+
+        Esto garantiza que la posición en cámara se captura sin que el
+        brazo obstruya la vista o mueva los tags.
+
+        Args:
+            available_tags: lista de tag IDs detectados y disponibles.
+
+        Returns:
+            Diccionario tag_id → (avg_cx, avg_cy) con las posiciones
+            promediadas en píxeles. Solo incluye los tags que se
+            pudieron muestrear exitosamente.
+        """
+        print('\n  ─── FASE A: Recolección de muestras de CÁMARA ───')
+        print('  El brazo NO debe estar sobre los tags.')
+        print('  Asegúrese de que todos los tags son visibles.\n')
+
+        camera_samples: Dict[int, Tuple[float, float]] = {}
+
+        for tag_id in available_tags:
+            zone = 'CINTA' if tag_id in self._conveyor_ids else 'PALET'
+            print(f'  Muestreando tag {tag_id} ({zone}) desde cámara...')
+
+            cam_pos = self._average_tag_position(tag_id)
+            if cam_pos is not None:
+                camera_samples[tag_id] = cam_pos
+                print(f'      ✓ Tag {tag_id}: ({cam_pos[0]:.1f}, {cam_pos[1]:.1f}) px')
+            else:
+                print(f'      ✗ Tag {tag_id}: no se pudo muestrear, se omitirá.')
+
+        print(f'\n  Muestras de cámara recolectadas: {len(camera_samples)}/{len(available_tags)}')
+        sampled_ids = sorted(camera_samples.keys())
+        print(f'  Tags muestreados: {sampled_ids}')
+
+        return camera_samples
+
+    # ─────────────────────────────────────────────────────────────
     # Proceso principal de calibración
     # ─────────────────────────────────────────────────────────────
     def run_calibration(self) -> bool:
@@ -325,6 +370,29 @@ class CalibrationNode(Node):
         # ─── Recolectar puntos ───
         print('\n[3/5] RECOLECCIÓN DE PUNTOS')
         print('-' * 60)
+
+        # ════════════════════════════════════════════════════════════
+        # FASE A: Recolectar TODAS las muestras de cámara PRIMERO
+        #         (antes de mover el brazo a ningún tag)
+        # ════════════════════════════════════════════════════════════
+        print('FASE A — MUESTREO DE CÁMARA (brazo fuera del campo de visión)')
+        print('  Asegúrese de que el brazo NO obstruye ningún tag.')
+        input('  Presione [ENTER] cuando esté listo para muestrear todos los tags: ')
+
+        camera_samples = self._collect_all_camera_samples(available_tags)
+
+        if len(camera_samples) < 3:
+            print(f'\n  ERROR: Solo {len(camera_samples)} tags muestreados '
+                  f'desde cámara, se necesitan 3+')
+            return False
+
+        # ════════════════════════════════════════════════════════════
+        # FASE B: Ahora mover el brazo al centro de cada tag muestreado
+        #         y registrar la pose del robot
+        # ════════════════════════════════════════════════════════════
+        print('\n' + '-' * 60)
+        print('FASE B — REGISTRO DE POSICIONES DEL ROBOT')
+        print('-' * 60)
         print('INSTRUCCIONES:')
         print('  - Para cada tag, mueva el TCP del robot hasta que la')
         print('    punta toque el CENTRO EXACTO del tag.')
@@ -335,20 +403,17 @@ class CalibrationNode(Node):
 
         calibrated_tags: List[int] = []
 
-        for tag_id in available_tags:
+        for tag_id in camera_samples:
             zone = 'CINTA' if tag_id in self._conveyor_ids else 'PALET'
+            cam_pos = camera_samples[tag_id]
             print(f'\n  >>> Tag {tag_id} ({zone})')
+            print(f'      Posición en cámara ya registrada: '
+                  f'({cam_pos[0]:.1f}, {cam_pos[1]:.1f}) px')
             print(f'      Mueva el TCP al centro del tag {tag_id}')
 
             user_input = input('      [ENTER=registrar, s=saltar]: ').strip().lower()
             if user_input == 's':
                 print(f'      Saltado tag {tag_id}')
-                continue
-
-            # Leer posición cámara (promedio de N muestras)
-            cam_pos = self._average_tag_position(tag_id)
-            if cam_pos is None:
-                print(f'      ERROR: Tag {tag_id} no detectado, saltando.')
                 continue
 
             # Leer posición robot

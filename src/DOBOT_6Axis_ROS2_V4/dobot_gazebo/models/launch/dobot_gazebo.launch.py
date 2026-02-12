@@ -27,7 +27,7 @@ def generate_launch_description():
     robot_description_content = doc.toxml()
 
     # World file
-    world_file = os.path.join(dobot_gazebo_path, 'worlds', 'cr.sdf')
+    world_file = os.path.join(dobot_gazebo_path, 'worlds', 'minimal_calibration.sdf')
 
     # Launch Gz Sim
     gz_sim = IncludeLaunchDescription(
@@ -58,7 +58,7 @@ def generate_launch_description():
             '-topic', 'robot_description',
             '-name', robot_name_in_model,
             '-allow_renaming', 'true',
-            '-z', '1.0',  # Altura de 1 metro
+            '-z', '0.72',  # Altura de 1 metro
         ],
         output='screen',
     )
