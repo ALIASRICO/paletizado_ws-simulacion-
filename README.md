@@ -71,7 +71,30 @@ pip install apriltag numpy opencv-python
 
 ---
 
-## 🚀 Instalación
+## 🐳 Ejecución con Docker (Recomendado)
+
+La forma más sencilla de ejecutar el proyecto completo es usando Docker:
+
+```bash
+# 1. Permitir X11 (para GUI de Gazebo/RViz)
+xhost +local:docker
+
+# 2. Construir y ejecutar todo el sistema
+docker compose -f docker/docker-compose.yml up --build
+```
+
+Esto levanta automáticamente:
+- **Gazebo Sim 8** con banda transportadora y detección de cajas
+- **YOLOv8-OBB** para detección de cajas de cartón
+- **MoveIt2** para planificación de movimientos
+- **Bridge ROS2 ↔ Gazebo** para comunicación
+- **Robot State Publisher** para el modelo URDF
+
+> 📖 Ver [docker/README.md](docker/README.md) para documentación completa.
+
+---
+
+## 🚀 Instalación (Desarrollo Local)
 
 ```bash
 # 1. Clonar el repositorio

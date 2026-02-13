@@ -29,6 +29,10 @@ setup(
     entry_points={
         'console_scripts': [
             'camera_viewer = pruebas_de_vision.camera_viewer:main',
+            'yolo_detector = pruebas_de_vision.yolo_detector:main',
+            'train_yolo = pruebas_de_vision.train_yolo:main',
+            'box_mover = pruebas_de_vision.box_mover:main',
+            'conveyor_controller = pruebas_de_vision.conveyor_controller:main',
         ],
     },
 )

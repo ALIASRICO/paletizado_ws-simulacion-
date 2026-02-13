@@ -118,3 +118,66 @@ geometry2/
 # *.jpg
 # *.pdf
 # *.gz
+
+# ------------------------------------------
+# Docker
+# ------------------------------------------
+# Build artifacts
+.docker/
+
+# Volumes and data directories (local only)
+docker/volumes/
+volumes/
+docker-data/
+
+# Docker compose override (local config)
+docker-compose.override.yml
+
+# Container logs
+*.container.log
+
+# Docker build cache
+.docker-cache/
+
+# ------------------------------------------
+# YOLO / ML
+# ------------------------------------------
+# Training outputs (large, generated)
+runs/
+wandb/
+
+# Model weights (large files)
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+*.weights
+
+# Dataset directories (large)
+datasets/
+data/
+kartonger-*/
+*.zip
+
+# Virtual environments
+venv/
+.venv/
+yolo_venv/
+env/
+.env/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# ------------------------------------------
+# Gazebo
+# ------------------------------------------
+.gazebo/
+gz-client/
+gz-sim/
+
+# ------------------------------------------
+# RViz
+# ------------------------------------------
+*.rviz.user

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>gz_conveyorbelt</name>
+  <version>1.0.0</version>
+  <description>Conveyor Belt Plugin for Gazebo Sim 8 (Harmonic) - Adapted from IFRA_ConveyorBelt</description>
+  <maintainer email="user@example.com">User</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  
+  <build_depend>gz-cmake3</build_depend>
+  <build_depend>gz-plugin2</build_depend>
+  <build_depend>gz-sim8</build_depend>
+  <build_depend>gz-common5</build_depend>
+  <build_depend>gz-math7</build_depend>
+  <build_depend>gz-transport13</build_depend>
+  
+  <exec_depend>gz-cmake3</exec_depend>
+  <exec_depend>gz-plugin2</exec_depend>
+  <exec_depend>gz-sim8</exec_depend>
+  <exec_depend>gz-common5</exec_depend>
+  <exec_depend>gz-math7</exec_depend>
+  <exec_depend>gz-transport13</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,308 @@
+# =============================================================================
+# Docker Compose - Sistema Completo DOBOT CR20V + YOLO + ROS2 Jazzy
+# =============================================================================
+# 
+# Este compose define el sistema completo de paletizado:
+#   1. gz_sim: Simulación Gazebo con robot CR20V y banda transportadora
+#   2. yolo_detector: Nodo de detección YOLOv8-OBB
+#   3. ros2_bridge: Puentes de topics entre ROS2 y Gazebo
+#   4. moveit: MoveIt2 para planificación de movimiento
+#
+# Uso:
+#   # Construir imágenes
+#   docker compose -f docker/docker-compose.yml build
+#
+#   # Iniciar todo el sistema
+#   docker compose -f docker/docker-compose.yml up -d
+#
+#   # Ver logs
+#   docker compose -f docker/docker-compose.yml logs -f
+#
+#   # Detener
+#   docker compose -f docker/docker-compose.yml down
+#
+# =============================================================================
+
+services:
+  # ===========================================================================
+  # Servicio 1: Gazebo Simulation con Robot CR20V
+  # ===========================================================================
+  gz_sim:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: runtime
+    image: dobot-cr20v-complete:latest
+    container_name: gz_sim
+    hostname: gz_sim
+    
+    # Network mode host para DDS discovery
+    network_mode: host
+    
+    # Variables de entorno
+    environment:
+      - ROS_DOMAIN_ID=0
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - DISPLAY=${DISPLAY:-:0}
+      - GZ_SIM_RESOURCE_PATH=/ros2_ws/src/gz_conveyorbelt/worlds:/ros2_ws/src/pruebas_de_vision/worlds:/ros2_ws/src/DOBOT_6Axis_ROS2_V4/dobot_gazebo/worlds
+      - GZ_PLUGIN_PATH=/ros2_ws/install/gz_conveyorbelt/lib
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility,graphics
+    
+    # X11 forwarding para GUI
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${HOME}/.Xauthority:/home/rosuser/.Xauthority:rw
+      # Bind mount para modelos entrenados
+      - ../runs:/ros2_ws/runs:ro
+      # Bind mount para datos
+      - ../kartonger-1:/ros2_ws/data/kartonger:ro
+    
+    # Comando por defecto: lanzar mundo de demo con robot
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               source /ros2_ws/install/setup.bash &&
+               gz sim -r /ros2_ws/install/gz_conveyorbelt/share/gz_conveyorbelt/worlds/conveyor_demo.sdf"
+    
+    # Healthcheck
+    healthcheck:
+      test: ["CMD", "gz", "sim", "-l"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    
+    # Recursos
+    deploy:
+      resources:
+        limits:
+          cpus: '6'
+          memory: 12G
+        reservations:
+          cpus: '2'
+          memory: 4G
+    
+    # Security options
+    security_opt:
+      - seccomp:unconfined
+    privileged: false
+
+  # ===========================================================================
+  # Servicio 2: YOLO Detector
+  # ===========================================================================
+  yolo_detector:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: runtime
+    image: dobot-cr20v-complete:latest
+    container_name: yolo_detector
+    hostname: yolo_detector
+    
+    # Network mode host para DDS discovery
+    network_mode: host
+    
+    # Depende de Gazebo
+    depends_on:
+      gz_sim:
+        condition: service_healthy
+    
+    # Variables de entorno
+    environment:
+      - ROS_DOMAIN_ID=0
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - DISPLAY=${DISPLAY:-:0}
+      # Parámetros del detector
+      - MODEL_PATH=/ros2_ws/runs/obb/kartonger_yolov8l/weights/best.pt
+      - CONFIDENCE_THRESHOLD=0.5
+      - IMAGE_TOPIC=/camera/color/image_raw
+      - SHOW_WINDOW=false
+    
+    # X11 forwarding para visualización
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${HOME}/.Xauthority:/home/rosuser/.Xauthority:rw
+      # Modelos entrenados
+      - ../runs:/ros2_ws/runs:ro
+    
+    # Comando: ejecutar detector YOLO
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               source /ros2_ws/install/setup.bash &&
+               source /opt/yolo_venv/bin/activate &&
+               python3 /ros2_ws/src/pruebas_de_vision/pruebas_de_vision/yolo_detector.py
+               --model /ros2_ws/runs/obb/kartonger_yolov8l/weights/best.pt
+               --confidence 0.5
+               --no-window"
+    
+    # Healthcheck
+    healthcheck:
+      test: ["CMD", "ros2", "topic", "list"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 90s
+    
+    # Recursos
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '1'
+          memory: 2G
+
+  # ===========================================================================
+  # Servicio 3: ROS2-Gazebo Bridge
+  # ===========================================================================
+  ros2_bridge:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: runtime
+    image: dobot-cr20v-complete:latest
+    container_name: ros2_bridge
+    hostname: ros2_bridge
+    
+    # Network mode host para DDS discovery
+    network_mode: host
+    
+    # Depende de Gazebo
+    depends_on:
+      gz_sim:
+        condition: service_healthy
+    
+    # Variables de entorno
+    environment:
+      - ROS_DOMAIN_ID=0
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+    
+    # Comando: bridges de cámara y joint states
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               source /ros2_ws/install/setup.bash &&
+               ros2 run ros_gz_bridge parameter_bridge
+               /camera/color/image_raw@sensor_msgs/msg/Image[gz.msgs.Image
+               /joint_states@sensor_msgs/msg/JointState[gz.msgs.Model"
+    
+    # Healthcheck
+    healthcheck:
+      test: ["CMD", "ros2", "topic", "list"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    
+    # Recursos mínimos
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  # ===========================================================================
+  # Servicio 4: MoveIt2 (Planificación de Movimiento)
+  # ===========================================================================
+  moveit:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: runtime
+    image: dobot-cr20v-complete:latest
+    container_name: moveit
+    hostname: moveit
+    
+    # Network mode host para DDS discovery
+    network_mode: host
+    
+    # Depende de Gazebo
+    depends_on:
+      gz_sim:
+        condition: service_healthy
+      ros2_bridge:
+        condition: service_healthy
+    
+    # Variables de entorno
+    environment:
+      - ROS_DOMAIN_ID=0
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - DISPLAY=${DISPLAY:-:0}
+    
+    # X11 forwarding para RViz
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${HOME}/.Xauthority:/home/rosuser/.Xauthority:rw
+    
+    # Comando: lanzar MoveIt2 con CR20V
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               source /ros2_ws/install/setup.bash &&
+               ros2 launch cr20_moveit demo.launch.py"
+    
+    # Healthcheck
+    healthcheck:
+      test: ["CMD", "ros2", "topic", "list"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    
+    # Recursos
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '2'
+          memory: 4G
+
+  # ===========================================================================
+  # Servicio 5: Robot State Publisher (opcional, para visualización)
+  # ===========================================================================
+  robot_state_publisher:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: runtime
+    image: dobot-cr20v-complete:latest
+    container_name: robot_state_publisher
+    hostname: robot_state_publisher
+    
+    # Network mode host para DDS discovery
+    network_mode: host
+    
+    # Variables de entorno
+    environment:
+      - ROS_DOMAIN_ID=0
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+    
+    # Comando: publicar estado del robot
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               source /ros2_ws/install/setup.bash &&
+               ros2 run robot_state_publisher robot_state_publisher
+               --urdf-file /ros2_ws/install/cra_description/share/cra_description/urdf/cr20_robot.urdf"
+    
+    # Recursos mínimos
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+
+# =============================================================================
+# Volúmenes para persistencia
+# =============================================================================
+volumes:
+  ros2_log:
+    driver: local
+    name: dobot_cr20v_log
+  
+  yolo_models:
+    driver: local
+    name: dobot_yolo_models

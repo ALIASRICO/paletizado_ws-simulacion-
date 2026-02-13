@@ -1,0 +1,112 @@
+# ============================================
+# .dockerignore - Sistema de Visión YOLO + ROS2
+# ============================================
+
+# Build artifacts
+build/
+install/
+log/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+
+# ROS2 build artifacts
+.colcon_install_layout
+colcon.pkg
+
+# Virtual environments
+yolo_venv/
+venv/
+env/
+.venv/
+.env/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+.github/
+
+# Documentation and text files
+*.md
+!README.md
+*.txt
+!requirements.txt
+LICENSE
+AGENTS.md
+plans/
+
+# Test and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.db
+ros2_log/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.temp
+
+# Build logs
+build_log.txt
+
+# Large binary files (models should be downloaded or mounted)
+*.pt
+*.onnx
+*.pth
+*.h5
+*.pb
+*.tflite
+
+# Dataset files (should be mounted as volumes)
+kartonger-1/
+data/
+datasets/
+
+# Training outputs (should be mounted as volumes)
+runs/
+
+# CMake build files (generated)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Package manager files (not needed in container)
+*.deb
+*.rpm
+
+# Temporary simulation files
+*.sdfwo
+.gz/
+
+# Screenshots and images (development artifacts)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp

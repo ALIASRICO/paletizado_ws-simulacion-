@@ -1,0 +1,25 @@
+# =============================================================================
+# Requirements para entorno virtual YOLO
+# =============================================================================
+# Este archivo define las dependencias Python para el entorno virtual aislado
+# que se usa para YOLO, separado del sistema ROS2 para evitar conflictos.
+#
+# Nota: numpy<2 es requerido para compatibilidad con cv_bridge de ROS2
+
+# YOLOv8 con soporte OBB (Oriented Bounding Box)
+ultralytics>=8.0.0
+
+# NumPy versión 1.x para compatibilidad con cv_bridge
+numpy<2
+
+# OpenCV headless (sin GUI, para contenedor)
+opencv-python-headless>=4.8.0
+
+# Descarga de datasets desde Roboflow (opcional)
+roboflow>=1.1.0
+
+# Utilidades adicionales
+pyyaml>=6.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+tqdm>=4.65.0
