@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>pruebas_de_vision</name>
+  <version>0.0.1</version>
+  <description>Paquete aislado para pruebas de visión con cámara en Gazebo y detección YOLOv8-OBB</description>
+  <maintainer email="user@todo.todo">user</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>geometry_msgs</depend>
+  <depend>vision_msgs</depend>
+  <depend>tf_transformations</depend>
+  
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>gz_sim_vendor</exec_depend>
+  <exec_depend>python3-opencv</exec_depend>
+  
+  <!-- Dependencias de Python para YOLO (instalar manualmente) -->
+  <!-- pip install ultralytics roboflow -->
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

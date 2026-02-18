@@ -1,0 +1,183 @@
+# ===========================================
+# ROS2 Git Ignore Professional
+# Sistema de Paletizado - DOBOT CR20V
+# ===========================================
+
+# ------------------------------------------
+# Build Artifacts
+# ------------------------------------------
+build/
+install/
+log/
+
+# ------------------------------------------
+# Python
+# ------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg
+MANIFEST
+
+# ------------------------------------------
+# C/C++
+# ------------------------------------------
+*.o
+*.obj
+*.out
+*.a
+*.la
+*.lo
+*.so
+*.dylib
+*.dll
+*.ninja
+*.cmake
+
+# ------------------------------------------
+# IDEs and Editors
+# ------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-*
+
+# ------------------------------------------
+# OS Generated
+# ------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.bak
+
+# ------------------------------------------
+# Colcon
+# ------------------------------------------
+*.user_data/
+*.AMENT_IGNORE
+COLCON_IGNORE
+
+# ------------------------------------------
+# Documentation (generated)
+# ------------------------------------------
+*.dox
+*.pdf
+*.ps
+
+# ------------------------------------------
+# Temporary Files
+# ------------------------------------------
+tmp/
+temp/
+*.tmp
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# ------------------------------------------
+# ROS Specific
+# ------------------------------------------
+*.bag
+*.db3
+*.mcap
+*.pcd
+*.ply
+nav2_msgs/
+geometry2/
+
+# ------------------------------------------
+# Large Binary Files (use Git LFS)
+# ------------------------------------------
+# *.STL
+# *.DAE
+# *.obj
+# *.png
+# *.jpg
+# *.pdf
+# *.gz
+
+# ------------------------------------------
+# Docker
+# ------------------------------------------
+# Build artifacts
+.docker/
+
+# Volumes and data directories (local only)
+docker/volumes/
+volumes/
+docker-data/
+
+# Docker compose override (local config)
+docker-compose.override.yml
+
+# Container logs
+*.container.log
+
+# Docker build cache
+.docker-cache/
+
+# ------------------------------------------
+# YOLO / ML
+# ------------------------------------------
+# Training outputs (large, generated)
+runs/
+wandb/
+
+# Model weights (large files)
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+*.weights
+
+# Dataset directories (large)
+datasets/
+data/
+kartonger-*/
+*.zip
+
+# Virtual environments
+venv/
+.venv/
+yolo_venv/
+env/
+.env/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# ------------------------------------------
+# Gazebo
+# ------------------------------------------
+.gazebo/
+gz-client/
+gz-sim/
+
+# ------------------------------------------
+# RViz
+# ------------------------------------------
+*.rviz.user

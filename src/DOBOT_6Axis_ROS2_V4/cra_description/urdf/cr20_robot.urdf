@@ -1,0 +1,270 @@
+<?xml version="1.0" ?>
+<!--
+  ================================================================
+  CR20 Robot - URDF para NVIDIA Isaac Sim
+  
+  Ubicación: urdf/cr20_robot_isaac.urdf
+  Meshes:    meshes/cr20/*.STL
+  ================================================================
+-->
+<robot name="cr20_robot">
+
+  <!-- ============================================================ -->
+  <!-- MATERIALES                                                    -->
+  <!-- ============================================================ -->
+  <material name="cr20_white">
+    <color rgba="0.792 0.820 0.933 1.0"/>
+  </material>
+
+  <material name="cr20_dark">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+
+  <!-- ============================================================ -->
+  <!-- WORLD LINK                                                    -->
+  <!-- ============================================================ -->
+  <link name="world"/>
+
+  <!-- ============================================================ -->
+  <!-- BASE LINK                                                     -->
+  <!-- ============================================================ -->
+  <link name="base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.052335 0.089927 -0.002793"/>
+      <mass value="5.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                           iyy="0.01" iyz="0.0"
+                                       izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/base_link.STL"/>
+      </geometry>
+      <material name="cr20_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/base_link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="world_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.03"/>
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+
+  <!-- ============================================================ -->
+  <!-- LINK 1                                                        -->
+  <!-- ============================================================ -->
+  <link name="Link1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.015458 -0.098638 1.041196"/>
+      <mass value="8.0"/>
+      <inertia ixx="0.05" ixy="0.0" ixz="0.0"
+                           iyy="0.05" iyz="0.0"
+                                       izz="0.02"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link1.STL"/>
+      </geometry>
+      <material name="cr20_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link1.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint1" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0.23"/>
+    <parent link="base_link"/>
+    <child link="Link1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="150.0" lower="-6.28" upper="6.28" velocity="3.14"/>
+    <dynamics damping="10.0" friction="0.5"/>
+  </joint>
+
+  <!-- ============================================================ -->
+  <!-- LINK 2                                                        -->
+  <!-- ============================================================ -->
+  <link name="Link2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.828899 0.0 0.115283"/>
+      <mass value="6.0"/>
+      <inertia ixx="0.1" ixy="0.0" ixz="0.0"
+                          iyy="0.1" iyz="0.0"
+                                     izz="0.02"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link2.STL"/>
+      </geometry>
+      <material name="cr20_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link2.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint2" type="revolute">
+    <origin rpy="1.5708 1.5708 0" xyz="0 0 0"/>
+    <parent link="Link1"/>
+    <child link="Link2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="150.0" lower="-6.28" upper="6.28" velocity="3.14"/>
+    <dynamics damping="10.0" friction="0.5"/>
+  </joint>
+
+  <!-- ============================================================ -->
+  <!-- LINK 3                                                        -->
+  <!-- ============================================================ -->
+  <link name="Link3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.746 0.0 0.07573"/>
+      <mass value="4.0"/>
+      <inertia ixx="0.05" ixy="0.0" ixz="0.0"
+                           iyy="0.05" iyz="0.0"
+                                       izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link3.STL"/>
+      </geometry>
+      <material name="cr20_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link3.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint3" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.8252 0 0.0468"/>
+    <parent link="Link2"/>
+    <child link="Link3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="150.0" lower="-2.9" upper="2.9" velocity="3.14"/>
+    <dynamics damping="8.0" friction="0.4"/>
+  </joint>
+
+  <!-- ============================================================ -->
+  <!-- LINK 4                                                        -->
+  <!-- ============================================================ -->
+  <link name="Link4">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 -0.07573 0.0"/>
+      <mass value="3.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                           iyy="0.01" iyz="0.0"
+                                       izz="0.005"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link4.STL"/>
+      </geometry>
+      <material name="cr20_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link4.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint4" type="revolute">
+    <origin rpy="0 0 -1.5708" xyz="-0.746 0 0.1288"/>
+    <parent link="Link3"/>
+    <child link="Link4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="50.0" lower="-6.28" upper="6.28" velocity="3.14"/>
+    <dynamics damping="5.0" friction="0.3"/>
+  </joint>
+
+  <!-- ============================================================ -->
+  <!-- LINK 5                                                        -->
+  <!-- ============================================================ -->
+  <link name="Link5">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.07573 0.0"/>
+      <mass value="2.0"/>
+      <inertia ixx="0.005" ixy="0.0" ixz="0.0"
+                            iyy="0.005" iyz="0.0"
+                                         izz="0.003"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link5.STL"/>
+      </geometry>
+      <material name="cr20_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link5.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint5" type="revolute">
+    <origin rpy="1.5708 0 0" xyz="0 -0.1288 0"/>
+    <parent link="Link4"/>
+    <child link="Link5"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="50.0" lower="-6.28" upper="6.28" velocity="3.14"/>
+    <dynamics damping="3.0" friction="0.2"/>
+  </joint>
+
+  <!-- ============================================================ -->
+  <!-- LINK 6                                                        -->
+  <!-- ============================================================ -->
+  <link name="Link6">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.015458 0.658803 -0.213462"/>
+      <mass value="1.0"/>
+      <inertia ixx="0.002" ixy="0.0" ixz="0.0"
+                            iyy="0.002" iyz="0.0"
+                                         izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link6.STL"/>
+      </geometry>
+      <material name="cr20_dark"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://cra_description/meshes/cr20/Link6.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint6" type="revolute">
+    <origin rpy="-1.5708 0 0" xyz="0 0.1365 0"/>
+    <parent link="Link5"/>
+    <child link="Link6"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="50.0" lower="-6.28" upper="6.28" velocity="3.14"/>
+    <dynamics damping="2.0" friction="0.1"/>
+  </joint>
+
+</robot>

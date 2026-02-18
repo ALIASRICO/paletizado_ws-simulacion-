@@ -1,0 +1,299 @@
+<?xml version="1.0" ?>
+<!--
+  ════════════════════════════════════════════════════════════════════════════
+  FASE 3: BANDA TRANSPORTADORA INDUSTRIAL - PARÁMETROS INDUSTRIALES
+  ════════════════════════════════════════════════════════════════════════════
+  
+  Dimensiones Banda:
+  - Largo (X): 0.60m
+  - Ancho (Y): 0.31m
+  - Altura superficie (Z): 0.75m
+  
+  Dimensiones Caja Industrial:
+  - Largo: 0.12m
+  - Ancho: 0.12m
+  - Alto: 0.10m
+  
+  Cálculo de poses:
+  - Superficie banda Z = 0.75m
+  - Centro caja Z = 0.75 + 0.05 = 0.80m (superficie + mitad altura)
+  
+  Distancia de seguridad:
+  - Spawn: X = -0.25m
+  - Pick: X = 0.25m
+  - Distancia mínima entre cajas: 0.18m (caja 0.12m + gap 0.06m)
+  
+  ════════════════════════════════════════════════════════════════════════════
+-->
+<sdf version="1.9">
+  <world name="conveyor_world">
+    
+    <!-- Plugins mínimos requeridos -->
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <!-- Plugin de sensores para la cámara -->
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    
+    <!-- Luz -->
+    <light type="directional" name="sun">
+      <pose>5 5 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <direction>-0.5 -0.5 -1</direction>
+    </light>
+    
+    <!-- Suelo -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane><normal>0 0 1</normal><size>10 10</size></plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane><normal>0 0 1</normal><size>10 10</size></plane>
+          </geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <!-- BANDA TRANSPORTADORA - Chasis Industrial con 4 Patas                 -->
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <model name="conveyor">
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+      
+      <!-- 4 PATAS ESTRUCTURALES (Cilíndricas) -->
+      <link name="leg_front_left">
+        <pose>-0.27 0.14 0.35 0 0 0</pose>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.015</radius><length>0.70</length></cylinder></geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material>
+        </visual>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.015</radius><length>0.70</length></cylinder></geometry>
+        </collision>
+      </link>
+      
+      <link name="leg_front_right">
+        <pose>-0.27 -0.14 0.35 0 0 0</pose>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.015</radius><length>0.70</length></cylinder></geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material>
+        </visual>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.015</radius><length>0.70</length></cylinder></geometry>
+        </collision>
+      </link>
+      
+      <link name="leg_back_left">
+        <pose>0.27 0.14 0.35 0 0 0</pose>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.015</radius><length>0.70</length></cylinder></geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material>
+        </visual>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.015</radius><length>0.70</length></cylinder></geometry>
+        </collision>
+      </link>
+      
+      <link name="leg_back_right">
+        <pose>0.27 -0.14 0.35 0 0 0</pose>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.015</radius><length>0.70</length></cylinder></geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material>
+        </visual>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.015</radius><length>0.70</length></cylinder></geometry>
+        </collision>
+      </link>
+      
+      <!-- MARCO SUPERIOR -->
+      <link name="frame_front">
+        <pose>0 0.14 0.70 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.60 0.02 0.02</size></box></geometry>
+          <material><ambient>0.4 0.4 0.45 1</ambient><diffuse>0.4 0.4 0.45 1</diffuse></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.60 0.02 0.02</size></box></geometry>
+        </collision>
+      </link>
+      
+      <link name="frame_back">
+        <pose>0 -0.14 0.70 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.60 0.02 0.02</size></box></geometry>
+          <material><ambient>0.4 0.4 0.45 1</ambient><diffuse>0.4 0.4 0.45 1</diffuse></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.60 0.02 0.02</size></box></geometry>
+        </collision>
+      </link>
+      
+      <link name="frame_left">
+        <pose>0.27 0 0.70 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.02 0.28 0.02</size></box></geometry>
+          <material><ambient>0.4 0.4 0.45 1</ambient><diffuse>0.4 0.4 0.45 1</diffuse></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.02 0.28 0.02</size></box></geometry>
+        </collision>
+      </link>
+      
+      <link name="frame_right">
+        <pose>-0.27 0 0.70 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.02 0.28 0.02</size></box></geometry>
+          <material><ambient>0.4 0.4 0.45 1</ambient><diffuse>0.4 0.4 0.45 1</diffuse></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.02 0.28 0.02</size></box></geometry>
+        </collision>
+      </link>
+      
+      <!-- SUPERFICIE DE LA BANDA (con colisión) -->
+      <link name="belt_surface">
+        <pose>0 0 0.745 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.54 0.26 0.01</size></box></geometry>
+          <material><ambient>0.15 0.15 0.18 1</ambient><diffuse>0.15 0.15 0.18 1</diffuse></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.54 0.26 0.01</size></box></geometry>
+        </collision>
+      </link>
+      
+      <!-- Rieles laterales -->
+      <link name="left_rail">
+        <pose>0 0.145 0.755 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.54 0.02 0.03</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.54 0.02 0.03</size></box></geometry>
+        </collision>
+      </link>
+      
+      <link name="right_rail">
+        <pose>0 -0.145 0.755 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.54 0.02 0.03</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.54 0.02 0.03</size></box></geometry>
+        </collision>
+      </link>
+      
+      <!-- Marcadores visuales -->
+      <link name="spawn_marker">
+        <pose>-0.25 0 0.741 0 0 0</pose>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.025</radius><length>0.002</length></cylinder></geometry>
+          <material><ambient>0 0.8 0 1</ambient><diffuse>0 0.8 0 1</diffuse></material>
+        </visual>
+      </link>
+      
+      <link name="pick_marker">
+        <pose>0.25 0 0.741 0 0 0</pose>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.025</radius><length>0.002</length></cylinder></geometry>
+          <material><ambient>0.9 0.9 0 1</ambient><diffuse>0.9 0.9 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <!-- CAJA INDUSTRIAL (Dimensiones: 0.12 x 0.12 x 0.10m)                   -->
+    <!-- Z = 0.80m (superficie 0.75 + mitad altura 0.05)                      -->
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <model name="box_1">
+      <pose>-0.25 0 0.80 0 0 0</pose>
+      <link name="link">
+        <kinematic>true</kinematic>
+        <inertial>
+          <mass>1.0</mass>
+          <inertia>
+            <ixx>0.003</ixx><iyy>0.003</iyy><izz>0.003</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+        </collision>
+        <!-- Cuerpo principal - Cartón Industrial -->
+        <visual name="body_visual">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+          <material>
+            <ambient>0.6 0.5 0.4 1</ambient>
+            <diffuse>0.6 0.5 0.4 1</diffuse>
+          </material>
+        </visual>
+        <!-- Etiqueta de envío (blanca) -->
+        <visual name="label_visual">
+          <pose>0 0.061 0 0 0 0</pose>
+          <geometry><box><size>0.08 0.002 0.05</size></box></geometry>
+          <material>
+            <ambient>0.95 0.95 0.95 1</ambient>
+            <diffuse>0.95 0.95 0.95 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <!-- CÁMARA PARA VISIÓN ARTIFICIAL                                         -->
+    <!-- Posición: 1.5m sobre la banda, mirando hacia abajo                   -->
+    <!-- ════════════════════════════════════════════════════════════════════ -->
+    <model name="conveyor_camera">
+      <!-- Altura 1.5m sobre banda (0.75 + 0.75), pitch = π/2 = mirando abajo -->
+      <pose>0 0 1.50 0 1.5708 0</pose>
+      <static>true</static>
+      <link name="camera_link">
+        
+        <!-- Visual de la cámara -->
+        <visual name="camera_visual">
+          <geometry>
+            <box><size>0.025 0.090 0.025</size></box>
+          </geometry>
+          <material>
+            <ambient>0.1 0.1 0.1 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+
+        <!-- Sensor de cámara RGB -->
+        <sensor name="color_camera" type="camera">
+          <pose>0 0 0 0 0 0</pose>
+          <always_on>1</always_on>
+          <update_rate>15</update_rate>
+          <visualize>true</visualize>
+          <topic>camera/color/image_raw</topic>
+          <camera>
+            <!-- FOV similar a RealSense D435i -->
+            <horizontal_fov>0.976</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <format>RGB_INT8</format>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>20.0</far>
+            </clip>
+          </camera>
+        </sensor>
+
+      </link>
+    </model>
+    
+  </world>
+</sdf>

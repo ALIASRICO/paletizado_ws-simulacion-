@@ -1,0 +1,56 @@
+# ════════════════════════════════════════════════════════════════════════════
+# ROS2 - GAZEBO BRIDGE CONFIGURATION (PALLETIZING WORLD)
+# ════════════════════════════════════════════════════════════════════════════
+# Sistema de Posicionamiento para Banda Transportadora + Robot DOBOT CR20
+# ROS2 Jazzy + Gazebo Harmonic (Sim 8)
+# ════════════════════════════════════════════════════════════════════════════
+
+# ════════════════════════════════════════════════════════════════════════════
+# CLOCK - Sincronización de tiempo
+# ════════════════════════════════════════════════════════════════════════════
+- ros_topic_name: "/clock"
+  gz_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  direction: GZ_TO_ROS
+
+# ════════════════════════════════════════════════════════════════════════════
+# POSE - Poses de entidades
+# ════════════════════════════════════════════════════════════════════════════
+- ros_topic_name: "/world/palletizing/pose/info"
+  gz_topic_name: "/world/palletizing/pose/info"
+  ros_type_name: "geometry_msgs/msg/PoseArray"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+# ════════════════════════════════════════════════════════════════════════════
+# CAMERA - Cámara de la banda transportadora
+# ════════════════════════════════════════════════════════════════════════════
+- ros_topic_name: "/camera/color/image_raw"
+  gz_topic_name: "/camera/color/image_raw"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/camera/color/camera_info"
+  gz_topic_name: "/camera/color/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  direction: GZ_TO_ROS
+
+# ════════════════════════════════════════════════════════════════════════════
+# CONTROL TOPICS - Comandos de control (tipos básicos)
+# ════════════════════════════════════════════════════════════════════════════
+# Velocidad de la banda
+- ros_topic_name: "/conveyor/speed"
+  gz_topic_name: "/conveyor/speed"
+  ros_type_name: "std_msgs/msg/Float32"
+  gz_type_name: "gz.msgs.Float"
+  direction: ROS_TO_GZ
+
+# Comando de spawn
+- ros_topic_name: "/conveyor/spawn_now"
+  gz_topic_name: "/conveyor/spawn_now"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  direction: ROS_TO_GZ

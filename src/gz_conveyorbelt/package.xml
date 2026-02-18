@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>gz_conveyorbelt</name>
+  <version>1.0.0</version>
+  <description>Conveyor Belt Controller for Gazebo Sim 8 (Harmonic) - Scripted Pose Control</description>
+  <maintainer email="user@example.com">User</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+  
+  <depend>rclcpp</depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>example_interfaces</depend>
+  <depend>ros_gz_bridge</depend>
+  
+  <exec_depend>gz-sim8</exec_depend>
+  <exec_depend>gz-transport13</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

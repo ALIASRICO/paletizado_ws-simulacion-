@@ -1,0 +1,310 @@
+<?xml version="1.0" ?>
+<!-- ============================================================
+     Mundo de prueba: Cámara a 2.80m mirando hacia abajo
+     Suelo + iluminación + cámara + objetos de prueba
+     ============================================================ -->
+<sdf version="1.9">
+  <world name="camera_test">
+
+    <!-- Física -->
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <!-- Plugins del servidor Gazebo -->
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <!-- Iluminación -->
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.9 0.9 0.9 1</diffuse>
+      <specular>0.3 0.3 0.3 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <!-- Suelo blanco para mejor contraste -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><plane><normal>0 0 1</normal></plane></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>10 10</size></plane></geometry>
+          <material>
+            <ambient>0.9 0.9 0.9 1</ambient>
+            <diffuse>0.9 0.9 0.9 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ==================== CAJAS DE CARTÓN (para YOLO) ==================== -->
+    <!-- El modelo YOLOv8-OBB fue entrenado con el dataset Kartonger (cajas de cartón) -->
+    <!-- Colores marrones típicos de cajas de cartón -->
+    
+    <!-- Caja de cartón 1 (centro) - 0.12 x 0.12 x 0.10m -->
+    <model name="cardboard_box_1">
+      <pose>0 0 0.05 0 0 0.2</pose>
+      <static>true</static>
+      <link name="link">
+        <!-- Cuerpo principal - Cartón marrón -->
+        <visual name="body_visual">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+          <material>
+            <ambient>0.6 0.5 0.4 1</ambient>
+            <diffuse>0.6 0.5 0.4 1</diffuse>
+          </material>
+        </visual>
+        <!-- Etiqueta blanca (simula etiqueta de envío) -->
+        <visual name="label_visual">
+          <pose>0 0.061 0 0 0 0</pose>
+          <geometry><box><size>0.08 0.002 0.05</size></box></geometry>
+          <material>
+            <ambient>0.95 0.95 0.95 1</ambient>
+            <diffuse>0.95 0.95 0.95 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Caja de cartón 2 (izquierda) -->
+    <model name="cardboard_box_2">
+      <pose>-0.25 0 0.05 0 0 -0.3</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="body_visual">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+          <material>
+            <ambient>0.55 0.45 0.35 1</ambient>
+            <diffuse>0.55 0.45 0.35 1</diffuse>
+          </material>
+        </visual>
+        <visual name="label_visual">
+          <pose>0 0.061 0 0 0 0</pose>
+          <geometry><box><size>0.08 0.002 0.05</size></box></geometry>
+          <material>
+            <ambient>0.95 0.95 0.95 1</ambient>
+            <diffuse>0.95 0.95 0.95 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Caja de cartón 3 (derecha) -->
+    <model name="cardboard_box_3">
+      <pose>0.25 0 0.05 0 0 0.5</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="body_visual">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+          <material>
+            <ambient>0.65 0.55 0.42 1</ambient>
+            <diffuse>0.65 0.55 0.42 1</diffuse>
+          </material>
+        </visual>
+        <visual name="label_visual">
+          <pose>0 0.061 0 0 0 0</pose>
+          <geometry><box><size>0.08 0.002 0.05</size></box></geometry>
+          <material>
+            <ambient>0.95 0.95 0.95 1</ambient>
+            <diffuse>0.95 0.95 0.95 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Caja de cartón 4 (arriba) -->
+    <model name="cardboard_box_4">
+      <pose>0 0.25 0.05 0 0 0.8</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="body_visual">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+          <material>
+            <ambient>0.58 0.48 0.38 1</ambient>
+            <diffuse>0.58 0.48 0.38 1</diffuse>
+          </material>
+        </visual>
+        <visual name="label_visual">
+          <pose>0 0.061 0 0 0 0</pose>
+          <geometry><box><size>0.08 0.002 0.05</size></box></geometry>
+          <material>
+            <ambient>0.95 0.95 0.95 1</ambient>
+            <diffuse>0.95 0.95 0.95 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Caja de cartón 5 (abajo) -->
+    <model name="cardboard_box_5">
+      <pose>0 -0.25 0.05 0 0 -0.6</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="body_visual">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+          <material>
+            <ambient>0.62 0.52 0.40 1</ambient>
+            <diffuse>0.62 0.52 0.40 1</diffuse>
+          </material>
+        </visual>
+        <visual name="label_visual">
+          <pose>0 0.061 0 0 0 0</pose>
+          <geometry><box><size>0.08 0.002 0.05</size></box></geometry>
+          <material>
+            <ambient>0.95 0.95 0.95 1</ambient>
+            <diffuse>0.95 0.95 0.95 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Caja de cartón 6 (esquina superior derecha) -->
+    <model name="cardboard_box_6">
+      <pose>0.2 0.2 0.05 0 0 1.2</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="body_visual">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+          <material>
+            <ambient>0.57 0.47 0.37 1</ambient>
+            <diffuse>0.57 0.47 0.37 1</diffuse>
+          </material>
+        </visual>
+        <visual name="label_visual">
+          <pose>0 0.061 0 0 0 0</pose>
+          <geometry><box><size>0.08 0.002 0.05</size></box></geometry>
+          <material>
+            <ambient>0.95 0.95 0.95 1</ambient>
+            <diffuse>0.95 0.95 0.95 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Caja de cartón 7 (esquina inferior izquierda) -->
+    <model name="cardboard_box_7">
+      <pose>-0.2 -0.2 0.05 0 0 -1.0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="body_visual">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+          <material>
+            <ambient>0.60 0.50 0.39 1</ambient>
+            <diffuse>0.60 0.50 0.39 1</diffuse>
+          </material>
+        </visual>
+        <visual name="label_visual">
+          <pose>0 0.061 0 0 0 0</pose>
+          <geometry><box><size>0.08 0.002 0.05</size></box></geometry>
+          <material>
+            <ambient>0.95 0.95 0.95 1</ambient>
+            <diffuse>0.95 0.95 0.95 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Caja de cartón 8 (esquina superior izquierda) -->
+    <model name="cardboard_box_8">
+      <pose>-0.2 0.2 0.05 0 0 0.4</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="body_visual">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+          <material>
+            <ambient>0.63 0.53 0.41 1</ambient>
+            <diffuse>0.63 0.53 0.41 1</diffuse>
+          </material>
+        </visual>
+        <visual name="label_visual">
+          <pose>0 0.061 0 0 0 0</pose>
+          <geometry><box><size>0.08 0.002 0.05</size></box></geometry>
+          <material>
+            <ambient>0.95 0.95 0.95 1</ambient>
+            <diffuse>0.95 0.95 0.95 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.12 0.12 0.10</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- ==================== CÁMARA ==================== -->
+    
+    <!-- Cámara a 2.80m mirando hacia abajo -->
+    <!-- pose: x y z roll pitch yaw -->
+    <!-- pitch = π/2 = 1.5708 rad = 90° (mirando hacia abajo) -->
+    <model name="test_camera">
+      <pose>0 0 2.80 0 1.5708 0</pose>
+      <static>true</static>
+      <link name="camera_link">
+        
+        <!-- Visual de la cámara (caja pequeña) -->
+        <visual name="camera_visual">
+          <geometry>
+            <box><size>0.025 0.090 0.025</size></box>
+          </geometry>
+          <material>
+            <ambient>0.1 0.1 0.1 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+
+        <!-- Sensor de cámara RGB -->
+        <sensor name="color_camera" type="camera">
+          <pose>0 0 0 0 0 0</pose>
+          <always_on>1</always_on>
+          <update_rate>15</update_rate>
+          <visualize>true</visualize>
+          <topic>camera/color/image_raw</topic>
+          <camera>
+            <!-- FOV similar a RealSense D435i -->
+            <horizontal_fov>0.976</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <format>RGB_INT8</format>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>20.0</far>
+            </clip>
+          </camera>
+        </sensor>
+
+      </link>
+    </model>
+
+  </world>
+</sdf>
