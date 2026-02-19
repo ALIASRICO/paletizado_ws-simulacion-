@@ -3,10 +3,32 @@
 <package format="3">
   <name>dobot_moveit</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>
+    MoveIt action server and joint state publisher for Dobot CR20 robot.
+    Compatible with ROS2 Jazzy and Isaac Sim 5.1.0.
+  </description>
   <maintainer email="futingxing@dobot-robot.com">FTX</maintainer>
-  <license>TODO: License declaration</license>
+  <license>BSD</license>
 
+  <!-- Build tools -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- ROS2 dependencies -->
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>trajectory_msgs</depend>
+  <depend>control_msgs</depend>
+  <depend>moveit_msgs</depend>
+  <depend>geometry_msgs</depend>
+
+  <!-- Isaac Sim support (NEW) -->
+  <exec_depend>ros_ign_bridge</exec_depend>
+
+  <!-- Custom packages -->
+  <exec_depend>dobot_msgs_v4</exec_depend>
+
+  <!-- Test dependencies -->
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
